@@ -1,0 +1,665 @@
+class,metric,value,city
+Water,ed,4.49,Adelaide
+Trees,ed,18.633,Adelaide
+Grass,ed,21.474,Adelaide
+Flooded vegetation,ed,21.043,Adelaide
+Crops,ed,28.223,Adelaide
+Shrub and scrub,ed,32.626,Adelaide
+Built,ed,23.664,Adelaide
+Bare,ed,4.083,Adelaide
+Snow and ice,ed,0.038,Adelaide
+Water,pland,2.229,Adelaide
+Trees,pland,8.438,Adelaide
+Grass,pland,2.858,Adelaide
+Flooded vegetation,pland,1.078,Adelaide
+Crops,pland,7.978,Adelaide
+Shrub and scrub,pland,3.769,Adelaide
+Built,pland,71.835,Adelaide
+Bare,pland,1.812,Adelaide
+Snow and ice,pland,0.003,Adelaide
+Water,ed,4.503,Perth
+Trees,ed,32.552,Perth
+Grass,ed,32.078,Perth
+Flooded vegetation,ed,28.628,Perth
+Crops,ed,34.462,Perth
+Shrub and scrub,ed,44.054,Perth
+Built,ed,32.976,Perth
+Bare,ed,5.691,Perth
+Snow and ice,ed,0.215,Perth
+Water,pland,2.092,Perth
+Trees,pland,16.94,Perth
+Grass,pland,3.746,Perth
+Flooded vegetation,pland,1.125,Perth
+Crops,pland,1.992,Perth
+Shrub and scrub,pland,5.06,Perth
+Built,pland,66.929,Perth
+Bare,pland,2.092,Perth
+Snow and ice,pland,0.024,Perth
+Water,ed,5.632,Darwin
+Trees,ed,48.222,Darwin
+Grass,ed,46.179,Darwin
+Flooded vegetation,ed,42.836,Darwin
+Crops,ed,46.903,Darwin
+Shrub and scrub,ed,60.36,Darwin
+Built,ed,29.776,Darwin
+Bare,ed,6.305,Darwin
+Snow and ice,ed,0.077,Darwin
+Water,pland,2.631,Darwin
+Trees,pland,30.253,Darwin
+Grass,pland,3.621,Darwin
+Flooded vegetation,pland,2.531,Darwin
+Crops,pland,1.663,Darwin
+Shrub and scrub,pland,20.224,Darwin
+Built,pland,37.458,Darwin
+Bare,pland,1.613,Darwin
+Snow and ice,pland,0.006,Darwin
+Water,ed,6.066,Brisbane
+Trees,ed,42.066,Brisbane
+Grass,ed,37.686,Brisbane
+Flooded vegetation,ed,28.67,Brisbane
+Crops,ed,28.766,Brisbane
+Shrub and scrub,ed,35.562,Brisbane
+Built,ed,34.906,Brisbane
+Bare,ed,1.212,Brisbane
+Snow and ice,ed,0.038,Brisbane
+Water,pland,2.395,Brisbane
+Trees,pland,30.395,Brisbane
+Grass,pland,6.344,Brisbane
+Flooded vegetation,pland,1.383,Brisbane
+Crops,pland,1.523,Brisbane
+Shrub and scrub,pland,1.824,Brisbane
+Built,pland,55.766,Brisbane
+Bare,pland,0.361,Brisbane
+Snow and ice,pland,0.009,Brisbane
+Water,ed,5.068,Sydney
+Trees,ed,30.964,Sydney
+Grass,ed,31.062,Sydney
+Flooded vegetation,ed,22.289,Sydney
+Crops,ed,23.775,Sydney
+Shrub and scrub,ed,28.075,Sydney
+Built,ed,28.281,Sydney
+Bare,ed,1.681,Sydney
+Snow and ice,ed,0.215,Sydney
+Water,pland,1.758,Sydney
+Trees,pland,24.012,Sydney
+Grass,pland,7.362,Sydney
+Flooded vegetation,pland,0.639,Sydney
+Crops,pland,1.516,Sydney
+Shrub and scrub,pland,1.305,Sydney
+Built,pland,62.954,Sydney
+Bare,pland,0.418,Sydney
+Snow and ice,pland,0.036,Sydney
+Water,ed,3.51,Canberra
+Trees,ed,36.825,Canberra
+Grass,ed,45.593,Canberra
+Flooded vegetation,ed,36.332,Canberra
+Crops,ed,40.679,Canberra
+Shrub and scrub,ed,42.976,Canberra
+Built,ed,22.647,Canberra
+Bare,ed,0.959,Canberra
+Snow and ice,ed,0.011,Canberra
+Water,pland,2.356,Canberra
+Trees,pland,17.89,Canberra
+Grass,pland,20.083,Canberra
+Flooded vegetation,pland,1.086,Canberra
+Crops,pland,2.114,Canberra
+Shrub and scrub,pland,6.425,Canberra
+Built,pland,49.821,Canberra
+Bare,pland,0.224,Canberra
+Snow and ice,pland,0.001,Canberra
+Water,ed,3.25,Melbourne
+Trees,ed,23.587,Melbourne
+Grass,ed,32.865,Melbourne
+Flooded vegetation,ed,25.466,Melbourne
+Crops,ed,26.307,Melbourne
+Shrub and scrub,ed,26.856,Melbourne
+Built,ed,24.798,Melbourne
+Bare,ed,1.025,Melbourne
+Snow and ice,ed,0.048,Melbourne
+Water,pland,1.052,Melbourne
+Trees,pland,12.461,Melbourne
+Grass,pland,12.764,Melbourne
+Flooded vegetation,pland,0.882,Melbourne
+Crops,pland,4.271,Melbourne
+Shrub and scrub,pland,1.19,Melbourne
+Built,pland,67.101,Melbourne
+Bare,pland,0.272,Melbourne
+Snow and ice,pland,0.007,Melbourne
+Water,ed,3.651,Rome
+Trees,ed,35.783,Rome
+Grass,ed,39.663,Rome
+Flooded vegetation,ed,40.183,Rome
+Crops,ed,43.813,Rome
+Shrub and scrub,ed,38.441,Rome
+Built,ed,32.304,Rome
+Bare,ed,0.264,Rome
+Water,pland,1.081,Rome
+Trees,pland,11.7,Rome
+Grass,pland,4.678,Rome
+Flooded vegetation,pland,1.182,Rome
+Crops,pland,11.385,Rome
+Shrub and scrub,pland,1.659,Rome
+Built,pland,68.268,Rome
+Bare,pland,0.046,Rome
+Water,ed,7.103,Vienna
+Trees,ed,23.281,Vienna
+Grass,ed,19.75,Vienna
+Flooded vegetation,ed,17.554,Vienna
+Crops,ed,22.603,Vienna
+Shrub and scrub,ed,25.002,Vienna
+Built,ed,22.067,Vienna
+Bare,ed,0.553,Vienna
+Snow and ice,ed,0.003,Vienna
+Water,pland,4.005,Vienna
+Trees,pland,24.613,Vienna
+Grass,pland,1.809,Vienna
+Flooded vegetation,pland,0.462,Vienna
+Crops,pland,12.046,Vienna
+Shrub and scrub,pland,0.768,Vienna
+Built,pland,56.152,Vienna
+Bare,pland,0.145,Vienna
+Snow and ice,pland,0,Vienna
+Water,ed,3.694,Lisbon
+Trees,ed,15.462,Lisbon
+Grass,ed,13.691,Lisbon
+Flooded vegetation,ed,13.709,Lisbon
+Crops,ed,18.589,Lisbon
+Shrub and scrub,ed,23.308,Lisbon
+Built,ed,25.086,Lisbon
+Bare,ed,3.888,Lisbon
+Snow and ice,ed,0.02,Lisbon
+Water,pland,0.893,Lisbon
+Trees,pland,11.166,Lisbon
+Grass,pland,0.81,Lisbon
+Flooded vegetation,pland,0.38,Lisbon
+Crops,pland,1.829,Lisbon
+Shrub and scrub,pland,1.605,Lisbon
+Built,pland,81.781,Lisbon
+Bare,pland,1.537,Lisbon
+Snow and ice,pland,0.001,Lisbon
+Water,ed,6.052,Berlin
+Trees,ed,24.839,Berlin
+Grass,ed,19.934,Berlin
+Flooded vegetation,ed,18.567,Berlin
+Crops,ed,19.743,Berlin
+Shrub and scrub,ed,23.581,Berlin
+Built,ed,22.384,Berlin
+Bare,ed,0.477,Berlin
+Snow and ice,ed,0.011,Berlin
+Water,pland,5.643,Berlin
+Trees,pland,27.17,Berlin
+Grass,pland,2.305,Berlin
+Flooded vegetation,pland,0.463,Berlin
+Crops,pland,3.222,Berlin
+Shrub and scrub,pland,0.734,Berlin
+Built,pland,60.359,Berlin
+Bare,pland,0.104,Berlin
+Snow and ice,pland,0.001,Berlin
+Water,ed,3.533,London
+Trees,ed,32.777,London
+Grass,ed,37.131,London
+Flooded vegetation,ed,27.781,London
+Crops,ed,27.539,London
+Shrub and scrub,ed,24.303,London
+Built,ed,26.668,London
+Bare,ed,0.876,London
+Snow and ice,ed,0.079,London
+Water,pland,2.341,London
+Trees,pland,14.782,London
+Grass,pland,8.036,London
+Flooded vegetation,pland,0.728,London
+Crops,pland,5.053,London
+Shrub and scrub,pland,0.682,London
+Built,pland,68.144,London
+Bare,pland,0.219,London
+Snow and ice,pland,0.014,London
+Water,ed,1.512,Madrid
+Trees,ed,31.859,Madrid
+Grass,ed,27.696,Madrid
+Flooded vegetation,ed,27.584,Madrid
+Crops,ed,41.198,Madrid
+Shrub and scrub,ed,53.196,Madrid
+Built,ed,32.138,Madrid
+Bare,ed,15.556,Madrid
+Snow and ice,ed,0.032,Madrid
+Water,pland,0.522,Madrid
+Trees,pland,20.622,Madrid
+Grass,pland,1.287,Madrid
+Flooded vegetation,pland,0.759,Madrid
+Crops,pland,4.899,Madrid
+Shrub and scrub,pland,20.634,Madrid
+Built,pland,42.838,Madrid
+Bare,pland,8.432,Madrid
+Snow and ice,pland,0.006,Madrid
+Water,ed,5.642,Paris
+Trees,ed,16.262,Paris
+Grass,ed,14.166,Paris
+Flooded vegetation,ed,12.914,Paris
+Crops,ed,14.969,Paris
+Shrub and scrub,ed,16.689,Paris
+Built,ed,19.834,Paris
+Bare,ed,1.673,Paris
+Snow and ice,ed,0.016,Paris
+Water,pland,2.095,Paris
+Trees,pland,11.919,Paris
+Grass,pland,1.66,Paris
+Flooded vegetation,pland,0.336,Paris
+Crops,pland,2.719,Paris
+Shrub and scrub,pland,0.498,Paris
+Built,pland,80.344,Paris
+Bare,pland,0.428,Paris
+Snow and ice,pland,0.001,Paris
+Water,ed,4.398,Prague
+Trees,ed,30.823,Prague
+Grass,ed,29.377,Prague
+Flooded vegetation,ed,27.747,Prague
+Crops,ed,33.456,Prague
+Shrub and scrub,ed,32.943,Prague
+Built,ed,29.713,Prague
+Bare,ed,0.608,Prague
+Snow and ice,ed,0.008,Prague
+Water,pland,1.812,Prague
+Trees,pland,19.562,Prague
+Grass,pland,3.903,Prague
+Flooded vegetation,pland,0.74,Prague
+Crops,pland,24.065,Prague
+Shrub and scrub,pland,1.13,Prague
+Built,pland,48.678,Prague
+Bare,pland,0.108,Prague
+Snow and ice,pland,0.001,Prague
+Water,ed,2.153,Lima
+Trees,ed,1.729,Lima
+Grass,ed,1.829,Lima
+Flooded vegetation,ed,1.849,Lima
+Crops,ed,4.163,Lima
+Shrub and scrub,ed,6.027,Lima
+Built,ed,14.654,Lima
+Bare,ed,11.653,Lima
+Snow and ice,ed,0.001,Lima
+Water,pland,0.839,Lima
+Trees,pland,0.13,Lima
+Grass,pland,0.145,Lima
+Flooded vegetation,pland,0.078,Lima
+Crops,pland,1.323,Lima
+Shrub and scrub,pland,0.442,Lima
+Built,pland,17.066,Lima
+Bare,pland,79.977,Lima
+Snow and ice,pland,0,Lima
+Water,ed,0.225,Quito
+Trees,ed,29.184,Quito
+Grass,ed,36.524,Quito
+Flooded vegetation,ed,29.893,Quito
+Crops,ed,32.241,Quito
+Shrub and scrub,ed,30.873,Quito
+Built,ed,19.384,Quito
+Bare,ed,0.772,Quito
+Snow and ice,ed,0.252,Quito
+Water,pland,0.028,Quito
+Trees,pland,24.068,Quito
+Grass,pland,11.897,Quito
+Flooded vegetation,pland,1.073,Quito
+Crops,pland,3.337,Quito
+Shrub and scrub,pland,7.235,Quito
+Built,pland,52.217,Quito
+Bare,pland,0.121,Quito
+Snow and ice,pland,0.025,Quito
+Water,ed,0.847,Santiago
+Trees,ed,13.746,Santiago
+Grass,ed,12.516,Santiago
+Flooded vegetation,ed,12.995,Santiago
+Crops,ed,30.075,Santiago
+Shrub and scrub,ed,37.347,Santiago
+Built,ed,20.795,Santiago
+Bare,ed,7.389,Santiago
+Snow and ice,ed,0.019,Santiago
+Water,pland,0.186,Santiago
+Trees,pland,5.262,Santiago
+Grass,pland,0.639,Santiago
+Flooded vegetation,pland,0.353,Santiago
+Crops,pland,13.868,Santiago
+Shrub and scrub,pland,18.778,Santiago
+Built,pland,55.642,Santiago
+Bare,pland,5.271,Santiago
+Snow and ice,pland,0.002,Santiago
+Water,ed,4.61,BuenosAires
+Trees,ed,33.565,BuenosAires
+Grass,ed,43.168,BuenosAires
+Flooded vegetation,ed,37.172,BuenosAires
+Crops,ed,34.086,BuenosAires
+Shrub and scrub,ed,27.662,BuenosAires
+Built,ed,18.583,BuenosAires
+Bare,ed,0.5,BuenosAires
+Snow and ice,ed,0.006,BuenosAires
+Water,pland,1.76,BuenosAires
+Trees,pland,18.091,BuenosAires
+Grass,pland,16.779,BuenosAires
+Flooded vegetation,pland,1.181,BuenosAires
+Crops,pland,12.591,BuenosAires
+Shrub and scrub,pland,1.716,BuenosAires
+Built,pland,47.776,BuenosAires
+Bare,pland,0.105,BuenosAires
+Snow and ice,pland,0.001,BuenosAires
+Water,ed,6.339,Boston
+Trees,ed,56.01,Boston
+Grass,ed,41.822,Boston
+Flooded vegetation,ed,36.039,Boston
+Crops,ed,38.557,Boston
+Shrub and scrub,ed,53.556,Boston
+Built,ed,47.13,Boston
+Bare,ed,0.759,Boston
+Snow and ice,ed,0.046,Boston
+Water,pland,3.812,Boston
+Trees,pland,50.947,Boston
+Grass,pland,2.394,Boston
+Flooded vegetation,pland,1.1,Boston
+Crops,pland,1.293,Boston
+Shrub and scrub,pland,1.967,Boston
+Built,pland,38.336,Boston
+Bare,pland,0.145,Boston
+Snow and ice,pland,0.005,Boston
+Water,ed,9.204,Calgary
+Trees,ed,20.042,Calgary
+Grass,ed,38.361,Calgary
+Flooded vegetation,ed,32.921,Calgary
+Crops,ed,39.041,Calgary
+Shrub and scrub,ed,45.206,Calgary
+Built,ed,54.786,Calgary
+Bare,ed,44.77,Calgary
+Snow and ice,ed,26.297,Calgary
+Water,pland,3.309,Calgary
+Trees,pland,5.245,Calgary
+Grass,pland,9.298,Calgary
+Flooded vegetation,pland,0.791,Calgary
+Crops,pland,6.906,Calgary
+Shrub and scrub,pland,2.94,Calgary
+Built,pland,62.713,Calgary
+Bare,pland,5.559,Calgary
+Snow and ice,pland,3.239,Calgary
+Water,ed,8.884,Chicago
+Trees,ed,39.995,Chicago
+Grass,ed,34.978,Chicago
+Flooded vegetation,ed,28.717,Chicago
+Crops,ed,31.321,Chicago
+Shrub and scrub,ed,33.699,Chicago
+Built,ed,38.301,Chicago
+Bare,ed,3.535,Chicago
+Snow and ice,ed,0.057,Chicago
+Water,pland,3.078,Chicago
+Trees,pland,18.644,Chicago
+Grass,pland,4.045,Chicago
+Flooded vegetation,pland,0.945,Chicago
+Crops,pland,5.439,Chicago
+Shrub and scrub,pland,1.301,Chicago
+Built,pland,65.355,Chicago
+Bare,pland,1.187,Chicago
+Snow and ice,pland,0.005,Chicago
+Water,ed,6.218,Columbus
+Trees,ed,36.317,Columbus
+Grass,ed,35.532,Columbus
+Flooded vegetation,ed,30.374,Columbus
+Crops,ed,33.844,Columbus
+Shrub and scrub,ed,37.663,Columbus
+Built,ed,40.454,Columbus
+Bare,ed,2.423,Columbus
+Snow and ice,ed,0.038,Columbus
+Water,pland,1.739,Columbus
+Trees,pland,14.906,Columbus
+Grass,pland,4.792,Columbus
+Flooded vegetation,pland,0.892,Columbus
+Crops,pland,5.676,Columbus
+Shrub and scrub,pland,1.248,Columbus
+Built,pland,69.998,Columbus
+Bare,pland,0.747,Columbus
+Snow and ice,pland,0.002,Columbus
+Water,ed,5.013,Dallas
+Trees,ed,25.824,Dallas
+Grass,ed,32.908,Dallas
+Flooded vegetation,ed,26.92,Dallas
+Crops,ed,29.226,Dallas
+Shrub and scrub,ed,35.415,Dallas
+Built,ed,37.267,Dallas
+Bare,ed,8.386,Dallas
+Snow and ice,ed,0.021,Dallas
+Water,pland,2.66,Dallas
+Trees,pland,10.638,Dallas
+Grass,pland,7.384,Dallas
+Flooded vegetation,pland,0.851,Dallas
+Crops,pland,2.187,Dallas
+Shrub and scrub,pland,2.398,Dallas
+Built,pland,71.501,Dallas
+Bare,pland,2.379,Dallas
+Snow and ice,pland,0.002,Dallas
+Water,ed,4.005,Denver
+Trees,ed,9.597,Denver
+Grass,ed,14.472,Denver
+Flooded vegetation,ed,14.187,Denver
+Crops,ed,30.162,Denver
+Shrub and scrub,ed,37.534,Denver
+Built,ed,28.126,Denver
+Bare,ed,5.652,Denver
+Snow and ice,ed,0.022,Denver
+Water,pland,2.463,Denver
+Trees,pland,1.728,Denver
+Grass,pland,2.058,Denver
+Flooded vegetation,pland,0.429,Denver
+Crops,pland,9.27,Denver
+Shrub and scrub,pland,4.886,Denver
+Built,pland,77.778,Denver
+Bare,pland,1.382,Denver
+Snow and ice,pland,0.006,Denver
+Water,ed,7.232,Houston
+Trees,ed,32.76,Houston
+Grass,ed,36.651,Houston
+Flooded vegetation,ed,28.078,Houston
+Crops,ed,29.465,Houston
+Shrub and scrub,ed,36.194,Houston
+Built,ed,40.294,Houston
+Bare,ed,5.744,Houston
+Snow and ice,ed,0.056,Houston
+Water,pland,2.831,Houston
+Trees,pland,15.432,Houston
+Grass,pland,7.445,Houston
+Flooded vegetation,pland,0.899,Houston
+Crops,pland,1.411,Houston
+Shrub and scrub,pland,1.689,Houston
+Built,pland,68.874,Houston
+Bare,pland,1.412,Houston
+Snow and ice,pland,0.006,Houston
+Water,ed,8.451,Indianapolis
+Trees,ed,36.529,Indianapolis
+Grass,ed,35.912,Indianapolis
+Flooded vegetation,ed,30.586,Indianapolis
+Crops,ed,36.116,Indianapolis
+Shrub and scrub,ed,40.466,Indianapolis
+Built,ed,44.008,Indianapolis
+Bare,ed,2.296,Indianapolis
+Snow and ice,ed,0.051,Indianapolis
+Water,pland,2.585,Indianapolis
+Trees,pland,13.751,Indianapolis
+Grass,pland,4.922,Indianapolis
+Flooded vegetation,pland,0.892,Indianapolis
+Crops,pland,8.06,Indianapolis
+Shrub and scrub,pland,1.336,Indianapolis
+Built,pland,67.81,Indianapolis
+Bare,pland,0.64,Indianapolis
+Snow and ice,pland,0.005,Indianapolis
+Water,ed,11.349,Jacksonville
+Trees,ed,49.439,Jacksonville
+Grass,ed,37.017,Jacksonville
+Flooded vegetation,ed,31.467,Jacksonville
+Crops,ed,32.588,Jacksonville
+Shrub and scrub,ed,43.644,Jacksonville
+Built,ed,46.098,Jacksonville
+Bare,ed,2.424,Jacksonville
+Snow and ice,ed,0.221,Jacksonville
+Water,pland,12.001,Jacksonville
+Trees,pland,33.193,Jacksonville
+Grass,pland,3.071,Jacksonville
+Flooded vegetation,pland,1.269,Jacksonville
+Crops,pland,1.01,Jacksonville
+Shrub and scrub,pland,2.029,Jacksonville
+Built,pland,46.923,Jacksonville
+Bare,pland,0.482,Jacksonville
+Snow and ice,pland,0.022,Jacksonville
+Water,ed,2.126,LosAngeles
+Trees,ed,10.579,LosAngeles
+Grass,ed,11.802,LosAngeles
+Flooded vegetation,ed,11.143,LosAngeles
+Crops,ed,15.834,LosAngeles
+Shrub and scrub,ed,21.049,LosAngeles
+Built,ed,16.581,LosAngeles
+Bare,ed,4.235,LosAngeles
+Snow and ice,ed,0.076,LosAngeles
+Water,pland,1.018,LosAngeles
+Trees,pland,3.239,LosAngeles
+Grass,pland,1.351,LosAngeles
+Flooded vegetation,pland,0.389,LosAngeles
+Crops,pland,1.866,LosAngeles
+Shrub and scrub,pland,4.276,LosAngeles
+Built,pland,86.321,LosAngeles
+Bare,pland,1.529,LosAngeles
+Snow and ice,pland,0.011,LosAngeles
+Water,ed,16.595,Miami
+Trees,ed,27.028,Miami
+Grass,ed,27.17,Miami
+Flooded vegetation,ed,22.179,Miami
+Crops,ed,23.534,Miami
+Shrub and scrub,ed,33.062,Miami
+Built,ed,35.247,Miami
+Bare,ed,2.624,Miami
+Snow and ice,ed,0.247,Miami
+Water,pland,7.658,Miami
+Trees,pland,6.584,Miami
+Grass,pland,3.806,Miami
+Flooded vegetation,pland,0.932,Miami
+Crops,pland,1.433,Miami
+Shrub and scrub,pland,1.862,Miami
+Built,pland,77.11,Miami
+Bare,pland,0.59,Miami
+Snow and ice,pland,0.025,Miami
+Water,ed,6.322,Montreal
+Trees,ed,20.403,Montreal
+Grass,ed,19.293,Montreal
+Flooded vegetation,ed,15.848,Montreal
+Crops,ed,17.025,Montreal
+Shrub and scrub,ed,21.49,Montreal
+Built,ed,23.885,Montreal
+Bare,ed,3.188,Montreal
+Snow and ice,ed,0.939,Montreal
+Water,pland,1.131,Montreal
+Trees,pland,11.269,Montreal
+Grass,pland,2.541,Montreal
+Flooded vegetation,pland,0.432,Montreal
+Crops,pland,1.391,Montreal
+Shrub and scrub,pland,0.654,Montreal
+Built,pland,81.955,Montreal
+Bare,pland,0.554,Montreal
+Snow and ice,pland,0.073,Montreal
+Water,ed,6.396,NewYork
+Trees,ed,42.667,NewYork
+Grass,ed,32.851,NewYork
+Flooded vegetation,ed,29.023,NewYork
+Crops,ed,29.832,NewYork
+Shrub and scrub,ed,40.198,NewYork
+Built,ed,39.501,NewYork
+Bare,ed,1.329,NewYork
+Snow and ice,ed,0.073,NewYork
+Water,pland,6.109,NewYork
+Trees,pland,30.382,NewYork
+Grass,pland,2.257,NewYork
+Flooded vegetation,pland,0.892,NewYork
+Crops,pland,1.506,NewYork
+Shrub and scrub,pland,1.324,NewYork
+Built,pland,57.137,NewYork
+Bare,pland,0.377,NewYork
+Snow and ice,pland,0.016,NewYork
+Water,ed,3.399,Ottawa
+Trees,ed,36.712,Ottawa
+Grass,ed,38.136,Ottawa
+Flooded vegetation,ed,32.062,Ottawa
+Crops,ed,32.635,Ottawa
+Shrub and scrub,ed,23.582,Ottawa
+Built,ed,19.874,Ottawa
+Bare,ed,1.985,Ottawa
+Snow and ice,ed,0.734,Ottawa
+Water,pland,3.765,Ottawa
+Trees,pland,44.215,Ottawa
+Grass,pland,7.353,Ottawa
+Flooded vegetation,pland,0.927,Ottawa
+Crops,pland,26.583,Ottawa
+Shrub and scrub,pland,1.342,Ottawa
+Built,pland,15.398,Ottawa
+Bare,pland,0.355,Ottawa
+Snow and ice,pland,0.061,Ottawa
+Water,ed,4.352,Philadelphia
+Trees,ed,51.653,Philadelphia
+Grass,ed,45.033,Philadelphia
+Flooded vegetation,ed,38.852,Philadelphia
+Crops,ed,39.566,Philadelphia
+Shrub and scrub,ed,48.503,Philadelphia
+Built,ed,46.038,Philadelphia
+Bare,ed,0.857,Philadelphia
+Snow and ice,ed,0.021,Philadelphia
+Water,pland,2.613,Philadelphia
+Trees,pland,31.527,Philadelphia
+Grass,pland,4.244,Philadelphia
+Flooded vegetation,pland,1.169,Philadelphia
+Crops,pland,4.437,Philadelphia
+Shrub and scrub,pland,1.483,Philadelphia
+Built,pland,54.275,Philadelphia
+Bare,pland,0.25,Philadelphia
+Snow and ice,pland,0.002,Philadelphia
+Water,ed,1.392,Phoenix
+Trees,ed,1.638,Phoenix
+Grass,ed,6.193,Phoenix
+Flooded vegetation,ed,5.238,Phoenix
+Crops,ed,10.529,Phoenix
+Shrub and scrub,ed,19.371,Phoenix
+Built,ed,25.943,Phoenix
+Bare,ed,12.136,Phoenix
+Snow and ice,ed,0.014,Phoenix
+Water,pland,0.334,Phoenix
+Trees,pland,0.136,Phoenix
+Grass,pland,1.266,Phoenix
+Flooded vegetation,pland,0.161,Phoenix
+Crops,pland,3.787,Phoenix
+Shrub and scrub,pland,4.682,Phoenix
+Built,pland,82.849,Phoenix
+Bare,pland,6.782,Phoenix
+Snow and ice,pland,0.003,Phoenix
+Water,ed,1.159,SanAntonio
+Trees,ed,31.145,SanAntonio
+Grass,ed,32.667,SanAntonio
+Flooded vegetation,ed,30.22,SanAntonio
+Crops,ed,33.512,SanAntonio
+Shrub and scrub,ed,41.609,SanAntonio
+Built,ed,36.014,SanAntonio
+Bare,ed,5.575,SanAntonio
+Snow and ice,ed,0.029,SanAntonio
+Water,pland,0.423,SanAntonio
+Trees,pland,15.351,SanAntonio
+Grass,pland,5.256,SanAntonio
+Flooded vegetation,pland,0.863,SanAntonio
+Crops,pland,2.381,SanAntonio
+Shrub and scrub,pland,4.124,SanAntonio
+Built,pland,69.77,SanAntonio
+Bare,pland,1.83,SanAntonio
+Snow and ice,pland,0.002,SanAntonio
+Water,ed,2.884,SanDiego
+Trees,ed,21.023,SanDiego
+Grass,ed,19.869,SanDiego
+Flooded vegetation,ed,19.048,SanDiego
+Crops,ed,26.171,SanDiego
+Shrub and scrub,ed,36.669,SanDiego
+Built,ed,26.064,SanDiego
+Bare,ed,3.565,SanDiego
+Snow and ice,ed,0.05,SanDiego
+Water,pland,2.113,SanDiego
+Trees,pland,6.646,SanDiego
+Grass,pland,1.717,SanDiego
+Flooded vegetation,pland,0.722,SanDiego
+Crops,pland,2.252,SanDiego
+Shrub and scrub,pland,8.533,SanDiego
+Built,pland,76.617,SanDiego
+Bare,pland,1.39,SanDiego
+Snow and ice,pland,0.011,SanDiego

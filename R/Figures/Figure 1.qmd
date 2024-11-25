@@ -1,0 +1,519 @@
+---
+title: "Figure 1"
+format: html
+editor: visual
+---
+
+```{r}
+# This script recreates figure one of the manuscript
+
+library(sf)
+library(ggplot2)
+library(patchwork)
+library(dplyr)
+library(purrr)
+library(tidyr)
+
+# Read in shapefile of the world
+World <- read_sf("Data/Figures/WB_countries_Admin0_10m.shp")
+
+# Read in shapefile of Western Sahara, as this is not included in the world shapefile for some reason
+WS <- read_sf("Data/Figures/gadm41_ESH_0.shp")
+
+# Read in Kestrel distribution shapefiles
+Kestrel_dist <- list.files(path = "Data/Kestrel Distributions/", pattern = "\\.shp$", full.names = T) |>  
+  map_df(read_sf) |>  
+  rename(scientific_name = binomial)
+
+# Seychelles
+Seychelles_Kestrel <- Kestrel_dist |> 
+  filter(scientific_name == "Falco araeus") |> 
+  select(geometry) |> 
+  st_make_valid() |> 
+  st_union() |>  
+  as_tibble() |>  
+  mutate(scientific_name = "Falco araeus",
+          common_name = "Seychelles Kestrel") |>  
+  st_sf()
+
+
+# Mauritius
+Mauritius_Kestrel <- Kestrel_dist |>  
+  filter(scientific_name == "Falco punctatus") |>  
+  select(geometry) |> 
+  st_make_valid() |> 
+  st_union() |>  
+  as_tibble() |>  
+  mutate(scientific_name = "Falco punctatus",
+          common_name = "Mauritius Kestrel") |>  
+  st_sf() 
+
+
+# Banded 
+Banded_Kestrel <- Kestrel_dist |> 
+  filter(scientific_name == "Falco zoniventris")|> 
+  select(geometry)  |>
+  mutate(scientific_name = "Falco zoniventris",
+          common_name = "Banded Kestrel") 
+
+
+# Malagasy
+Malagasy_Kestrel <- Kestrel_dist |>  
+  filter(scientific_name == "Falco newtoni") |> 
+  select(geometry)  |>
+  mutate(scientific_name = "Falco newtoni",
+          common_name = "Malagasy Kestrel")
+
+# Fox
+Fox_Kestrel <- Kestrel_dist |>  
+  filter(scientific_name == "Falco alopex") |>  
+  select(geometry, scientific_name) %>% 
+  mutate(common_name = "Fox Kestrel")
+
+# Spotted
+Spotted_Kestrel <- Kestrel_dist %>% 
+  filter(scientific_name == "Falco moluccensis") %>% 
+  select(geometry, scientific_name) %>% 
+  mutate(common_name = "Spotted Kestrel")
+
+# Dickinsons
+Dickinsons_Kestrel <- Kestrel_dist %>% 
+  filter(scientific_name == "Falco dickinsoni") %>% 
+  select(geometry, scientific_name) %>% 
+  mutate(common_name = "Dickinsons Kestrel")
+
+# Grey
+Grey_Kestrel <- Kestrel_dist %>% 
+  filter(scientific_name == "Falco ardosiaceus") %>% 
+  select(geometry, scientific_name) %>% 
+  mutate(common_name = "Grey Kestrel")
+
+# Greater
+Greater_Kestrel <- Kestrel_dist %>% 
+  filter(scientific_name == "Falco rupicoloides") %>% 
+  select(geometry, scientific_name) %>% 
+  mutate(common_name = "Greater Kestrel")
+
+# Rock
+Rock_Kestrel <- Kestrel_dist %>% 
+  select(geometry, admin, labelrank) %>% 
+  drop_na() %>% 
+  st_combine() %>% 
+  as_tibble() %>% 
+  mutate(scientific_name = "Falco rupicolus",
+          common_name = "Rock Kestrel") %>% 
+  st_sf()
+
+# Nankeen
+Nankeen_Kestrel <- Kestrel_dist %>% 
+  filter(scientific_name == "Falco cenchroides") %>% 
+  select(geometry) %>%
+  st_make_valid() %>% 
+  st_union() %>% 
+  as_tibble() %>% 
+  mutate(scientific_name = "Falco cenchroides",
+          common_name = "Nankeen Kestrel") %>% 
+  st_sf()
+
+# Lesser
+Lesser_Kestrel <- Kestrel_dist %>% 
+  filter(scntfc_ == "Falco naumanni") %>% 
+  select(geometry) %>%
+  st_make_valid() %>% 
+  st_union() %>% 
+  as_tibble() %>% 
+  mutate(scientific_name = "Falco naumanni",
+          common_name = "Lesser Kestrel") %>% 
+  st_sf()
+
+# Eurasian
+Eurasian_Kestrel <- Kestrel_dist %>% 
+  filter(FID == 0) %>%
+  slice_tail() %>% 
+  select(geometry) %>%
+  st_make_valid() %>% 
+  st_union() %>% 
+  as_tibble() %>% 
+  mutate(scientific_name = "Falco tinnunculus",
+          common_name = "Eurasian Kestrel") %>% 
+  st_sf()
+
+# American
+American_Kestrel <- Kestrel_dist %>% 
+  filter(FID == 0) %>%
+  slice_head() %>% 
+  select(geometry) %>%
+  st_combine() %>% 
+  as_tibble() %>% 
+  mutate(scientific_name = "Falco sparverius",
+          common_name = "American Kestrel") %>% 
+  st_sf()
+
+Kestrel_dist_clean <-  bind_rows(Seychelles_Kestrel, Mauritius_Kestrel, Banded_Kestrel, Malagasy_Kestrel, Fox_Kestrel, Spotted_Kestrel, Dickinsons_Kestrel, Grey_Kestrel, Greater_Kestrel, Rock_Kestrel, Nankeen_Kestrel, Lesser_Kestrel, Eurasian_Kestrel, American_Kestrel)
+
+
+# Calculate centroids
+
+# Fox
+centroidFox <- Fox_Kestrel |>
+  summarize() |>
+  st_centroid() |>
+  st_coordinates() |>
+  as_tibble()
+
+Fox_constant <- 45
+
+# Banded
+centroidBanded <- Banded_Kestrel |>
+  summarize() |>
+  st_centroid()|>
+  st_coordinates() |>
+  as_tibble()
+
+Banded_constant <- 10
+
+# Rock
+centroidRock <- Rock_Kestrel |>
+  st_make_valid() |> 
+  summarise() |> 
+  st_centroid()|>
+  st_coordinates() |>
+  as_tibble()
+
+Rock_constant <- 20
+
+# Nankeen
+centroidNankeen <- Nankeen_Kestrel |>
+  st_make_valid() |> 
+  summarise() |> 
+  st_centroid()|>
+  st_coordinates() |>
+  as_tibble()
+
+Nankeen_constant <- 25
+
+# American
+centroidAmerican <- American_Kestrel |>
+  st_make_valid() |> 
+  summarise() |> 
+  st_centroid()|>
+  st_coordinates() |>
+  as_tibble()
+
+American_constant <- 70
+
+# Eurasian
+centroidEurasian <- Eurasian_Kestrel |>
+  st_make_valid() |> 
+  summarise() |> 
+  st_centroid()|>
+  st_coordinates() |>
+  as_tibble()
+
+Eurasian_constant <- 70
+
+# Lesser
+centroidLesser <- Lesser_Kestrel |>
+  st_make_valid() |> 
+  summarise() |> 
+  st_centroid()|>
+  st_coordinates() |>
+  as_tibble()
+
+Lesser_constant <- 70
+
+# Mauritius
+centroidMauritius <- Mauritius_Kestrel |>
+  st_make_valid() |> 
+  summarise() |> 
+  st_centroid()|>
+  st_coordinates() |>
+  as_tibble()
+
+Mauritius_constant <- 0.3
+
+# Seychelles
+centroidSeychelles <- Seychelles_Kestrel |>
+  st_make_valid() |> 
+  summarise() |> 
+  st_centroid()|>
+  st_coordinates() |>
+  as_tibble()
+
+Seychelles_constant <- 0.3
+
+# Malagasy
+centroidMalagasy <- Malagasy_Kestrel |>
+  st_make_valid() |> 
+  summarise() |> 
+  st_centroid()|>
+  st_coordinates() |>
+  as_tibble()
+
+Malagasy_constant <- 10
+
+# Spotted
+centroidSpotted <- Spotted_Kestrel |>
+  st_make_valid() |> 
+  summarise() |> 
+  st_centroid()|>
+  st_coordinates() |>
+  as_tibble()
+
+Spotted_constant <- 10
+
+# Dickinsons
+centroidDickinsons <- Dickinsons_Kestrel |>
+  st_make_valid() |> 
+  summarise() |> 
+  st_centroid()|>
+  st_coordinates() |>
+  as_tibble()
+
+Dickinsons_constant <- 10
+
+# Spotted
+centroidGrey <- Grey_Kestrel |>
+  st_make_valid() |> 
+  summarise() |> 
+  st_centroid() |>
+  st_coordinates() |>
+  as_tibble()
+
+Grey_constant <- 40
+
+# Greater
+centroidGreater <- Greater_Kestrel |>
+  st_make_valid() |> 
+  summarise() |> 
+  st_centroid() |>
+  st_coordinates() |>
+  as_tibble()
+
+Greater_constant <- 10
+
+# Makes both plots and set x and y limits according to 
+# centroid and + / - constant
+gg_Fox <- ggplot() +
+  geom_sf(data = World) +
+  geom_sf(data = WS) +
+  geom_sf(data = Fox_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidFox$X - 30,
+                    centroidFox$X + 40),
+           ylim = c(centroidFox$Y - Fox_constant,
+                    centroidFox$Y + 30))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank()) +
+  scale_x_continuous(breaks = c(-10, 10, 30, 50))
+
+gg_Fox
+
+gg_Banded <- ggplot() +
+  geom_sf(data = World) +
+  geom_sf(data = Banded_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidBanded$X - Banded_constant,
+                    centroidBanded$X + Banded_constant),
+           ylim = c(centroidBanded$Y - Banded_constant,
+                    centroidBanded$Y + Banded_constant))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank())
+
+gg_Rock <- ggplot() +
+  geom_sf(data = World) +
+  geom_sf(data = Rock_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidRock$X - Rock_constant,
+                    centroidRock$X + Rock_constant),
+           ylim = c(centroidRock$Y - Rock_constant,
+                    centroidRock$Y + Rock_constant))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank())
+
+gg_Nankeen <- ggplot() +
+  geom_sf(data = World) +
+  geom_sf(data = Nankeen_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidNankeen$X - Nankeen_constant,
+                    centroidNankeen$X + Nankeen_constant),
+           ylim = c(centroidNankeen$Y - 20,
+                    centroidNankeen$Y + Nankeen_constant))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank())+
+  scale_x_continuous(breaks = c(110, 130, 150))
+
+gg_Nankeen
+
+gg_American <- ggplot() +
+  geom_sf(data = World) +
+  geom_sf(data = American_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidAmerican$X - 73,
+                    centroidAmerican$X + 55),
+           ylim = c(centroidAmerican$Y - American_constant,
+                    centroidAmerican$Y + 60))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank()) +
+  scale_x_continuous(breaks = c(-140, -100, -60, -20))
+
+gg_American
+
+gg_Eurasian <- ggplot() +
+  geom_sf(data = World) +
+  geom_sf(data = WS) +
+  geom_sf(data = Eurasian_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidEurasian$X - Eurasian_constant,
+                    centroidEurasian$X + 80),
+           ylim = c(centroidEurasian$Y - 73,
+                    centroidEurasian$Y + 35))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank())+
+  scale_x_continuous(breaks = c(-20, 20, 60, 100, 140))
+
+gg_Eurasian
+
+gg_Lesser <- ggplot() +
+  geom_sf(data = World) +
+  geom_sf(data = WS) +
+  geom_sf(data = Lesser_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidLesser$X - 60,
+                    centroidLesser$X + Lesser_constant),
+           ylim = c(centroidLesser$Y - 60,
+                    centroidLesser$Y + 45))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank())+
+  scale_x_continuous(breaks = c(-20, 20, 60, 100))
+
+gg_Lesser
+
+gg_Mauritius <- ggplot() +
+  geom_sf(data = World) +
+  geom_sf(data = Mauritius_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidMauritius$X - 0.5,
+                    centroidMauritius$X + 0.5),
+           ylim = c(centroidMauritius$Y - Mauritius_constant,
+                    centroidMauritius$Y + 0.5))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank())+
+  scale_x_continuous(breaks = c(57.2, 57.6, 58))
+
+gg_Mauritius
+
+gg_Seychelles <- ggplot() +
+  geom_sf(data = Seychelles_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidSeychelles$X - 0.4,
+                    centroidSeychelles$X + 0.5),
+           ylim = c(centroidSeychelles$Y - 0.4,
+                    centroidSeychelles$Y + 0.4))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank()) +
+  scale_x_continuous(breaks = c(55.2, 55.6, 56))
+
+gg_Seychelles
+
+gg_Malagasy <- ggplot() +
+  geom_sf(data = World) +
+  geom_sf(data = Malagasy_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidMalagasy$X - Malagasy_constant,
+                    centroidMalagasy$X + Malagasy_constant),
+           ylim = c(centroidMalagasy$Y - Malagasy_constant,
+                    centroidMalagasy$Y + Malagasy_constant))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank())
+
+gg_Spotted <- ggplot() +
+  geom_sf(data = World) +
+  geom_sf(data = Spotted_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidSpotted$X - 14,
+                    centroidSpotted$X + 14),
+           ylim = c(centroidSpotted$Y - Spotted_constant,
+                    centroidSpotted$Y + Spotted_constant))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank()) +
+  scale_x_continuous(breaks = c(110, 120, 130))
+
+gg_Spotted
+
+gg_Dickinsons <- ggplot() +
+  geom_sf(data = World) +
+  geom_sf(data = Dickinsons_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidDickinsons$X - 17,
+                    centroidDickinsons$X + 12),
+           ylim = c(centroidDickinsons$Y - 20,
+                    centroidDickinsons$Y + Dickinsons_constant))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank())+
+  scale_x_continuous(breaks = c(10, 20, 30, 40))
+
+gg_Dickinsons
+
+gg_Grey <- ggplot() +
+  geom_sf(data = World) +
+  geom_sf(data = WS) + 
+  geom_sf(data = Grey_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidGrey$X - 32,
+                    centroidGrey$X + Grey_constant),
+           ylim = c(centroidGrey$Y - Grey_constant,
+                    centroidGrey$Y + Grey_constant))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank())+
+  scale_x_continuous(breaks = c(-20, 0, 20, 40))
+
+gg_Greater <- ggplot() +
+  geom_sf(data = World) +
+  geom_sf(data = WS) +
+  geom_sf(data = Greater_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
+  coord_sf(xlim = c(centroidGreater$X - 42,
+                    centroidGreater$X + 25),
+           ylim = c(centroidGreater$Y - 18,
+                    centroidGreater$Y + 40))+
+                 theme_bw() +
+                 facet_wrap(~common_name) +
+  theme(panel.background = element_rect(fill = "lightblue"),
+        panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank())+
+  scale_x_continuous(breaks = c(-10, 10, 30, 50))
+
+gg_Greater
+
+# Plot as one big figure with 14 small plots
+plots <- gg_Rock + gg_Fox + gg_Greater + gg_Grey + gg_Dickinsons + gg_Malagasy + gg_Banded + gg_Mauritius + gg_Seychelles + gg_Eurasian + gg_Lesser + gg_American + gg_Nankeen + gg_Spotted + plot_annotation(tag_levels = 'A')
+
+
+ggsave("Figures/Figure_1.png", plots, dpi = 800, width = 28, height = 25, units = "cm")
+```

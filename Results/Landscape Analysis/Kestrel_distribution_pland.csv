@@ -1,0 +1,489 @@
+class,metric,value,species
+Unclassified Land,pland,0.097,American_Kestrel
+Barren Land,pland,3.26,American_Kestrel
+Permanent Snow and Ice,pland,0.352,American_Kestrel
+Water Bodies,pland,6.431,American_Kestrel
+Evergreen Needleleaf Forests,pland,3.493,American_Kestrel
+Evergreen Broadleaf Forests,pland,7.969,American_Kestrel
+Deciduous Needleleaf Forests,pland,0.009,American_Kestrel
+Deciduous Broadleaf Forests,pland,3.737,American_Kestrel
+Mixed Broadleaf/Needleleaf Forests,pland,3.058,American_Kestrel
+Mixed Broadleaf Evergreen/Deciduous Forests,pland,0.149,American_Kestrel
+Open Forests,pland,13,American_Kestrel
+Sparse Forests,pland,18.351,American_Kestrel
+Dense Herbaceous,pland,31.814,American_Kestrel
+Sparse Herbaceous,pland,2.094,American_Kestrel
+Dense Shrublands,pland,0.17,American_Kestrel
+Shrubland/Grassland Mosaics,pland,1.978,American_Kestrel
+Sparse Shrublands,pland,4.037,American_Kestrel
+Unclassified Land,pland,0.095,American_Kestrel
+Barren Land,pland,3.231,American_Kestrel
+Permanent Snow and Ice,pland,0.352,American_Kestrel
+Water Bodies,pland,6.431,American_Kestrel
+Urban and Built-up Lands,pland,0.838,American_Kestrel
+Dense Forests,pland,18.408,American_Kestrel
+Open Forests,pland,29.809,American_Kestrel
+Forest/Cropland Mosaics,pland,1.05,American_Kestrel
+Natural Herbaceous,pland,24.547,American_Kestrel
+Natural Herbaceous/Cropland Mosaics,pland,0.005,American_Kestrel
+Herbaceous Croplands,pland,9.073,American_Kestrel
+Shrublands,pland,6.161,American_Kestrel
+Unclassified Land,pland,0.097,American_Kestrel
+Barren Land,pland,3.26,American_Kestrel
+Permanent Snow and Ice,pland,0.352,American_Kestrel
+Water Bodies,pland,6.431,American_Kestrel
+Dense Forests,pland,18.293,American_Kestrel
+Open Forests,pland,30.93,American_Kestrel
+Woody Wetlands,pland,0.545,American_Kestrel
+Grasslands,pland,33.148,American_Kestrel
+Shrublands,pland,5.965,American_Kestrel
+Herbaceous Wetlands,pland,0.394,American_Kestrel
+Tundra,pland,0.585,American_Kestrel
+Unclassified Land,pland,0,Banded_Kestrel
+Barren Land,pland,0.026,Banded_Kestrel
+Water Bodies,pland,2.902,Banded_Kestrel
+Evergreen Needleleaf Forests,pland,0.001,Banded_Kestrel
+Evergreen Broadleaf Forests,pland,8.267,Banded_Kestrel
+Deciduous Needleleaf Forests,pland,0,Banded_Kestrel
+Deciduous Broadleaf Forests,pland,1.251,Banded_Kestrel
+Mixed Broadleaf Evergreen/Deciduous Forests,pland,0.046,Banded_Kestrel
+Open Forests,pland,6.304,Banded_Kestrel
+Sparse Forests,pland,6.92,Banded_Kestrel
+Dense Herbaceous,pland,69.058,Banded_Kestrel
+Sparse Herbaceous,pland,1.125,Banded_Kestrel
+Dense Shrublands,pland,0.391,Banded_Kestrel
+Shrubland/Grassland Mosaics,pland,1.39,Banded_Kestrel
+Sparse Shrublands,pland,2.32,Banded_Kestrel
+Unclassified Land,pland,0,Banded_Kestrel
+Barren Land,pland,0.026,Banded_Kestrel
+Water Bodies,pland,2.902,Banded_Kestrel
+Urban and Built-up Lands,pland,0.018,Banded_Kestrel
+Dense Forests,pland,9.564,Banded_Kestrel
+Open Forests,pland,13.22,Banded_Kestrel
+Natural Herbaceous,pland,69.381,Banded_Kestrel
+Herbaceous Croplands,pland,0.789,Banded_Kestrel
+Shrublands,pland,4.099,Banded_Kestrel
+Unclassified Land,pland,0,Banded_Kestrel
+Barren Land,pland,0.026,Banded_Kestrel
+Water Bodies,pland,2.902,Banded_Kestrel
+Dense Forests,pland,9.394,Banded_Kestrel
+Open Forests,pland,13.168,Banded_Kestrel
+Woody Wetlands,pland,0.225,Banded_Kestrel
+Grasslands,pland,69.763,Banded_Kestrel
+Shrublands,pland,4.1,Banded_Kestrel
+Herbaceous Wetlands,pland,0.421,Banded_Kestrel
+Unclassified Land,pland,0.001,Dickinsons_Kestrel
+Barren Land,pland,0.055,Dickinsons_Kestrel
+Permanent Snow and Ice,pland,0,Dickinsons_Kestrel
+Water Bodies,pland,0.981,Dickinsons_Kestrel
+Evergreen Needleleaf Forests,pland,0.001,Dickinsons_Kestrel
+Evergreen Broadleaf Forests,pland,1.221,Dickinsons_Kestrel
+Deciduous Broadleaf Forests,pland,3.347,Dickinsons_Kestrel
+Mixed Broadleaf/Needleleaf Forests,pland,0,Dickinsons_Kestrel
+Mixed Broadleaf Evergreen/Deciduous Forests,pland,2.741,Dickinsons_Kestrel
+Open Forests,pland,11.084,Dickinsons_Kestrel
+Sparse Forests,pland,36.664,Dickinsons_Kestrel
+Dense Herbaceous,pland,40.685,Dickinsons_Kestrel
+Sparse Herbaceous,pland,0.124,Dickinsons_Kestrel
+Dense Shrublands,pland,1.322,Dickinsons_Kestrel
+Shrubland/Grassland Mosaics,pland,1.69,Dickinsons_Kestrel
+Sparse Shrublands,pland,0.084,Dickinsons_Kestrel
+Unclassified Land,pland,0.001,Dickinsons_Kestrel
+Barren Land,pland,0.054,Dickinsons_Kestrel
+Permanent Snow and Ice,pland,0,Dickinsons_Kestrel
+Water Bodies,pland,0.981,Dickinsons_Kestrel
+Urban and Built-up Lands,pland,0.129,Dickinsons_Kestrel
+Dense Forests,pland,7.309,Dickinsons_Kestrel
+Open Forests,pland,47.668,Dickinsons_Kestrel
+Forest/Cropland Mosaics,pland,0.032,Dickinsons_Kestrel
+Natural Herbaceous,pland,38.923,Dickinsons_Kestrel
+Natural Herbaceous/Cropland Mosaics,pland,0.005,Dickinsons_Kestrel
+Herbaceous Croplands,pland,1.804,Dickinsons_Kestrel
+Shrublands,pland,3.094,Dickinsons_Kestrel
+Unclassified Land,pland,0.001,Dickinsons_Kestrel
+Barren Land,pland,0.055,Dickinsons_Kestrel
+Permanent Snow and Ice,pland,0,Dickinsons_Kestrel
+Water Bodies,pland,0.981,Dickinsons_Kestrel
+Dense Forests,pland,7.277,Dickinsons_Kestrel
+Open Forests,pland,47.588,Dickinsons_Kestrel
+Woody Wetlands,pland,0.193,Dickinsons_Kestrel
+Grasslands,pland,40.482,Dickinsons_Kestrel
+Shrublands,pland,3.085,Dickinsons_Kestrel
+Herbaceous Wetlands,pland,0.338,Dickinsons_Kestrel
+Unclassified Land,pland,0.033,Eurasian_Kestrel
+Barren Land,pland,21.643,Eurasian_Kestrel
+Permanent Snow and Ice,pland,0.168,Eurasian_Kestrel
+Water Bodies,pland,5.842,Eurasian_Kestrel
+Evergreen Needleleaf Forests,pland,1.349,Eurasian_Kestrel
+Evergreen Broadleaf Forests,pland,2.197,Eurasian_Kestrel
+Deciduous Needleleaf Forests,pland,0.181,Eurasian_Kestrel
+Deciduous Broadleaf Forests,pland,2.382,Eurasian_Kestrel
+Mixed Broadleaf/Needleleaf Forests,pland,4.361,Eurasian_Kestrel
+Mixed Broadleaf Evergreen/Deciduous Forests,pland,0.563,Eurasian_Kestrel
+Open Forests,pland,6.149,Eurasian_Kestrel
+Sparse Forests,pland,9.668,Eurasian_Kestrel
+Dense Herbaceous,pland,36.636,Eurasian_Kestrel
+Sparse Herbaceous,pland,5.723,Eurasian_Kestrel
+Dense Shrublands,pland,0.08,Eurasian_Kestrel
+Shrubland/Grassland Mosaics,pland,0.244,Eurasian_Kestrel
+Sparse Shrublands,pland,2.782,Eurasian_Kestrel
+Unclassified Land,pland,0.03,Eurasian_Kestrel
+Barren Land,pland,21.589,Eurasian_Kestrel
+Permanent Snow and Ice,pland,0.168,Eurasian_Kestrel
+Water Bodies,pland,5.842,Eurasian_Kestrel
+Urban and Built-up Lands,pland,1.022,Eurasian_Kestrel
+Dense Forests,pland,11.027,Eurasian_Kestrel
+Open Forests,pland,13.856,Eurasian_Kestrel
+Forest/Cropland Mosaics,pland,1.503,Eurasian_Kestrel
+Natural Herbaceous,pland,26.487,Eurasian_Kestrel
+Natural Herbaceous/Cropland Mosaics,pland,0.019,Eurasian_Kestrel
+Herbaceous Croplands,pland,15.37,Eurasian_Kestrel
+Shrublands,pland,3.087,Eurasian_Kestrel
+Unclassified Land,pland,0.033,Eurasian_Kestrel
+Barren Land,pland,21.643,Eurasian_Kestrel
+Permanent Snow and Ice,pland,0.168,Eurasian_Kestrel
+Water Bodies,pland,5.842,Eurasian_Kestrel
+Dense Forests,pland,11.001,Eurasian_Kestrel
+Open Forests,pland,15.718,Eurasian_Kestrel
+Woody Wetlands,pland,0.131,Eurasian_Kestrel
+Grasslands,pland,41.551,Eurasian_Kestrel
+Shrublands,pland,3.089,Eurasian_Kestrel
+Herbaceous Wetlands,pland,0.296,Eurasian_Kestrel
+Tundra,pland,0.528,Eurasian_Kestrel
+Unclassified Land,pland,0,Fox_Kestrel
+Barren Land,pland,3.095,Fox_Kestrel
+Water Bodies,pland,0.288,Fox_Kestrel
+Evergreen Broadleaf Forests,pland,0.822,Fox_Kestrel
+Deciduous Broadleaf Forests,pland,0.591,Fox_Kestrel
+Mixed Broadleaf Evergreen/Deciduous Forests,pland,0.361,Fox_Kestrel
+Open Forests,pland,0.521,Fox_Kestrel
+Sparse Forests,pland,20.247,Fox_Kestrel
+Dense Herbaceous,pland,68.458,Fox_Kestrel
+Sparse Herbaceous,pland,4.887,Fox_Kestrel
+Dense Shrublands,pland,0.002,Fox_Kestrel
+Shrubland/Grassland Mosaics,pland,0.02,Fox_Kestrel
+Sparse Shrublands,pland,0.707,Fox_Kestrel
+Unclassified Land,pland,0,Fox_Kestrel
+Barren Land,pland,3.094,Fox_Kestrel
+Water Bodies,pland,0.288,Fox_Kestrel
+Urban and Built-up Lands,pland,0.15,Fox_Kestrel
+Dense Forests,pland,1.774,Fox_Kestrel
+Open Forests,pland,20.298,Fox_Kestrel
+Forest/Cropland Mosaics,pland,0.458,Fox_Kestrel
+Natural Herbaceous,pland,57.574,Fox_Kestrel
+Natural Herbaceous/Cropland Mosaics,pland,1.082,Fox_Kestrel
+Herbaceous Croplands,pland,14.555,Fox_Kestrel
+Shrublands,pland,0.727,Fox_Kestrel
+Unclassified Land,pland,0,Fox_Kestrel
+Barren Land,pland,3.095,Fox_Kestrel
+Water Bodies,pland,0.288,Fox_Kestrel
+Dense Forests,pland,1.763,Fox_Kestrel
+Open Forests,pland,20.699,Fox_Kestrel
+Woody Wetlands,pland,0.08,Fox_Kestrel
+Grasslands,pland,73.115,Fox_Kestrel
+Shrublands,pland,0.727,Fox_Kestrel
+Herbaceous Wetlands,pland,0.231,Fox_Kestrel
+Unclassified Land,pland,0.003,Greater_Kestrel
+Barren Land,pland,8.61,Greater_Kestrel
+Permanent Snow and Ice,pland,0,Greater_Kestrel
+Water Bodies,pland,0.42,Greater_Kestrel
+Evergreen Needleleaf Forests,pland,0.001,Greater_Kestrel
+Evergreen Broadleaf Forests,pland,0.425,Greater_Kestrel
+Deciduous Broadleaf Forests,pland,0.232,Greater_Kestrel
+Mixed Broadleaf/Needleleaf Forests,pland,0,Greater_Kestrel
+Mixed Broadleaf Evergreen/Deciduous Forests,pland,0.526,Greater_Kestrel
+Open Forests,pland,0.773,Greater_Kestrel
+Sparse Forests,pland,3.262,Greater_Kestrel
+Dense Herbaceous,pland,47.055,Greater_Kestrel
+Sparse Herbaceous,pland,2.002,Greater_Kestrel
+Dense Shrublands,pland,0.585,Greater_Kestrel
+Shrubland/Grassland Mosaics,pland,19.702,Greater_Kestrel
+Sparse Shrublands,pland,16.403,Greater_Kestrel
+Unclassified Land,pland,0.003,Greater_Kestrel
+Barren Land,pland,8.606,Greater_Kestrel
+Permanent Snow and Ice,pland,0,Greater_Kestrel
+Water Bodies,pland,0.42,Greater_Kestrel
+Urban and Built-up Lands,pland,0.301,Greater_Kestrel
+Dense Forests,pland,1.184,Greater_Kestrel
+Open Forests,pland,3.691,Greater_Kestrel
+Forest/Cropland Mosaics,pland,0.312,Greater_Kestrel
+Natural Herbaceous,pland,46.369,Greater_Kestrel
+Natural Herbaceous/Cropland Mosaics,pland,0.029,Greater_Kestrel
+Herbaceous Croplands,pland,2.418,Greater_Kestrel
+Shrublands,pland,36.667,Greater_Kestrel
+Unclassified Land,pland,0.003,Greater_Kestrel
+Barren Land,pland,8.61,Greater_Kestrel
+Permanent Snow and Ice,pland,0,Greater_Kestrel
+Water Bodies,pland,0.42,Greater_Kestrel
+Dense Forests,pland,1.183,Greater_Kestrel
+Open Forests,pland,4.034,Greater_Kestrel
+Woody Wetlands,pland,0.001,Greater_Kestrel
+Grasslands,pland,48.908,Greater_Kestrel
+Shrublands,pland,36.678,Greater_Kestrel
+Herbaceous Wetlands,pland,0.159,Greater_Kestrel
+Tundra,pland,0.003,Greater_Kestrel
+Unclassified Land,pland,0.001,Grey_Kestrel
+Barren Land,pland,2.554,Grey_Kestrel
+Water Bodies,pland,0.66,Grey_Kestrel
+Evergreen Needleleaf Forests,pland,0,Grey_Kestrel
+Evergreen Broadleaf Forests,pland,4.457,Grey_Kestrel
+Deciduous Broadleaf Forests,pland,1.792,Grey_Kestrel
+Mixed Broadleaf/Needleleaf Forests,pland,0,Grey_Kestrel
+Mixed Broadleaf Evergreen/Deciduous Forests,pland,1.537,Grey_Kestrel
+Open Forests,pland,4.798,Grey_Kestrel
+Sparse Forests,pland,31.191,Grey_Kestrel
+Dense Herbaceous,pland,49.325,Grey_Kestrel
+Sparse Herbaceous,pland,2.818,Grey_Kestrel
+Dense Shrublands,pland,0.202,Grey_Kestrel
+Shrubland/Grassland Mosaics,pland,0.099,Grey_Kestrel
+Sparse Shrublands,pland,0.566,Grey_Kestrel
+Unclassified Land,pland,0.001,Grey_Kestrel
+Barren Land,pland,2.552,Grey_Kestrel
+Water Bodies,pland,0.66,Grey_Kestrel
+Urban and Built-up Lands,pland,0.26,Grey_Kestrel
+Dense Forests,pland,7.786,Grey_Kestrel
+Open Forests,pland,33.766,Grey_Kestrel
+Forest/Cropland Mosaics,pland,2.105,Grey_Kestrel
+Natural Herbaceous,pland,40.626,Grey_Kestrel
+Natural Herbaceous/Cropland Mosaics,pland,0.914,Grey_Kestrel
+Herbaceous Croplands,pland,10.464,Grey_Kestrel
+Shrublands,pland,0.866,Grey_Kestrel
+Unclassified Land,pland,0.001,Grey_Kestrel
+Barren Land,pland,2.554,Grey_Kestrel
+Water Bodies,pland,0.66,Grey_Kestrel
+Dense Forests,pland,7.754,Grey_Kestrel
+Open Forests,pland,35.922,Grey_Kestrel
+Woody Wetlands,pland,0.099,Grey_Kestrel
+Grasslands,pland,51.969,Grey_Kestrel
+Shrublands,pland,0.863,Grey_Kestrel
+Herbaceous Wetlands,pland,0.179,Grey_Kestrel
+Unclassified Land,pland,0.039,Lesser_Kestrel
+Barren Land,pland,31.685,Lesser_Kestrel
+Permanent Snow and Ice,pland,0.138,Lesser_Kestrel
+Water Bodies,pland,3.709,Lesser_Kestrel
+Evergreen Needleleaf Forests,pland,0.368,Lesser_Kestrel
+Evergreen Broadleaf Forests,pland,1.837,Lesser_Kestrel
+Deciduous Needleleaf Forests,pland,0.146,Lesser_Kestrel
+Deciduous Broadleaf Forests,pland,0.9,Lesser_Kestrel
+Mixed Broadleaf/Needleleaf Forests,pland,0.716,Lesser_Kestrel
+Mixed Broadleaf Evergreen/Deciduous Forests,pland,0.363,Lesser_Kestrel
+Open Forests,pland,2.781,Lesser_Kestrel
+Sparse Forests,pland,7.952,Lesser_Kestrel
+Dense Herbaceous,pland,34.66,Lesser_Kestrel
+Sparse Herbaceous,pland,7.03,Lesser_Kestrel
+Dense Shrublands,pland,0.294,Lesser_Kestrel
+Shrubland/Grassland Mosaics,pland,2.08,Lesser_Kestrel
+Sparse Shrublands,pland,5.304,Lesser_Kestrel
+Unclassified Land,pland,0.039,Lesser_Kestrel
+Barren Land,pland,31.628,Lesser_Kestrel
+Permanent Snow and Ice,pland,0.138,Lesser_Kestrel
+Water Bodies,pland,3.709,Lesser_Kestrel
+Urban and Built-up Lands,pland,0.457,Lesser_Kestrel
+Dense Forests,pland,4.328,Lesser_Kestrel
+Open Forests,pland,10.164,Lesser_Kestrel
+Forest/Cropland Mosaics,pland,0.469,Lesser_Kestrel
+Natural Herbaceous,pland,33.784,Lesser_Kestrel
+Natural Herbaceous/Cropland Mosaics,pland,0.015,Lesser_Kestrel
+Herbaceous Croplands,pland,7.618,Lesser_Kestrel
+Shrublands,pland,7.652,Lesser_Kestrel
+Unclassified Land,pland,0.039,Lesser_Kestrel
+Barren Land,pland,31.685,Lesser_Kestrel
+Permanent Snow and Ice,pland,0.138,Lesser_Kestrel
+Water Bodies,pland,3.709,Lesser_Kestrel
+Dense Forests,pland,4.307,Lesser_Kestrel
+Open Forests,pland,10.685,Lesser_Kestrel
+Woody Wetlands,pland,0.07,Lesser_Kestrel
+Grasslands,pland,41.279,Lesser_Kestrel
+Shrublands,pland,7.668,Lesser_Kestrel
+Herbaceous Wetlands,pland,0.183,Lesser_Kestrel
+Tundra,pland,0.238,Lesser_Kestrel
+Unclassified Land,pland,0,Malagasy_Kestrel
+Barren Land,pland,0.021,Malagasy_Kestrel
+Water Bodies,pland,2.302,Malagasy_Kestrel
+Evergreen Needleleaf Forests,pland,0.001,Malagasy_Kestrel
+Evergreen Broadleaf Forests,pland,8.311,Malagasy_Kestrel
+Deciduous Needleleaf Forests,pland,0,Malagasy_Kestrel
+Deciduous Broadleaf Forests,pland,0.882,Malagasy_Kestrel
+Mixed Broadleaf/Needleleaf Forests,pland,0,Malagasy_Kestrel
+Mixed Broadleaf Evergreen/Deciduous Forests,pland,0.045,Malagasy_Kestrel
+Open Forests,pland,8.562,Malagasy_Kestrel
+Sparse Forests,pland,10.009,Malagasy_Kestrel
+Dense Herbaceous,pland,66.04,Malagasy_Kestrel
+Sparse Herbaceous,pland,0.877,Malagasy_Kestrel
+Dense Shrublands,pland,0.298,Malagasy_Kestrel
+Shrubland/Grassland Mosaics,pland,0.985,Malagasy_Kestrel
+Sparse Shrublands,pland,1.667,Malagasy_Kestrel
+Unclassified Land,pland,0,Malagasy_Kestrel
+Barren Land,pland,0.021,Malagasy_Kestrel
+Water Bodies,pland,2.302,Malagasy_Kestrel
+Urban and Built-up Lands,pland,0.043,Malagasy_Kestrel
+Dense Forests,pland,9.239,Malagasy_Kestrel
+Open Forests,pland,18.493,Malagasy_Kestrel
+Forest/Cropland Mosaics,pland,0.066,Malagasy_Kestrel
+Natural Herbaceous,pland,66.09,Malagasy_Kestrel
+Herbaceous Croplands,pland,0.797,Malagasy_Kestrel
+Shrublands,pland,2.949,Malagasy_Kestrel
+Unclassified Land,pland,0,Malagasy_Kestrel
+Barren Land,pland,0.021,Malagasy_Kestrel
+Water Bodies,pland,2.302,Malagasy_Kestrel
+Dense Forests,pland,9.109,Malagasy_Kestrel
+Open Forests,pland,18.479,Malagasy_Kestrel
+Woody Wetlands,pland,0.221,Malagasy_Kestrel
+Grasslands,pland,66.585,Malagasy_Kestrel
+Shrublands,pland,2.95,Malagasy_Kestrel
+Herbaceous Wetlands,pland,0.333,Malagasy_Kestrel
+Water Bodies,pland,0.275,Mauritius_Kestrel
+Evergreen Broadleaf Forests,pland,18.366,Mauritius_Kestrel
+Deciduous Broadleaf Forests,pland,0.034,Mauritius_Kestrel
+Mixed Broadleaf Evergreen/Deciduous Forests,pland,0.172,Mauritius_Kestrel
+Open Forests,pland,0.687,Mauritius_Kestrel
+Sparse Forests,pland,45.451,Mauritius_Kestrel
+Dense Herbaceous,pland,34.981,Mauritius_Kestrel
+Sparse Herbaceous,pland,0.034,Mauritius_Kestrel
+Water Bodies,pland,0.275,Mauritius_Kestrel
+Urban and Built-up Lands,pland,4.6,Mauritius_Kestrel
+Dense Forests,pland,18.572,Mauritius_Kestrel
+Open Forests,pland,20.563,Mauritius_Kestrel
+Forest/Cropland Mosaics,pland,21.284,Mauritius_Kestrel
+Natural Herbaceous,pland,4.978,Mauritius_Kestrel
+Herbaceous Croplands,pland,29.729,Mauritius_Kestrel
+Water Bodies,pland,0.275,Mauritius_Kestrel
+Dense Forests,pland,18.538,Mauritius_Kestrel
+Open Forests,pland,46.104,Mauritius_Kestrel
+Woody Wetlands,pland,0.069,Mauritius_Kestrel
+Grasslands,pland,34.844,Mauritius_Kestrel
+Herbaceous Wetlands,pland,0.172,Mauritius_Kestrel
+Unclassified Land,pland,0.006,Nankeen_Kestrel
+Barren Land,pland,1.937,Nankeen_Kestrel
+Permanent Snow and Ice,pland,0,Nankeen_Kestrel
+Water Bodies,pland,1.81,Nankeen_Kestrel
+Evergreen Needleleaf Forests,pland,0.487,Nankeen_Kestrel
+Evergreen Broadleaf Forests,pland,6.116,Nankeen_Kestrel
+Deciduous Needleleaf Forests,pland,0,Nankeen_Kestrel
+Deciduous Broadleaf Forests,pland,0.005,Nankeen_Kestrel
+Mixed Broadleaf/Needleleaf Forests,pland,0,Nankeen_Kestrel
+Mixed Broadleaf Evergreen/Deciduous Forests,pland,0.039,Nankeen_Kestrel
+Open Forests,pland,1.517,Nankeen_Kestrel
+Sparse Forests,pland,5.876,Nankeen_Kestrel
+Dense Herbaceous,pland,26.093,Nankeen_Kestrel
+Sparse Herbaceous,pland,0.825,Nankeen_Kestrel
+Dense Shrublands,pland,3.399,Nankeen_Kestrel
+Shrubland/Grassland Mosaics,pland,7.906,Nankeen_Kestrel
+Sparse Shrublands,pland,43.986,Nankeen_Kestrel
+Unclassified Land,pland,0.006,Nankeen_Kestrel
+Barren Land,pland,1.936,Nankeen_Kestrel
+Permanent Snow and Ice,pland,0,Nankeen_Kestrel
+Water Bodies,pland,1.81,Nankeen_Kestrel
+Urban and Built-up Lands,pland,0.122,Nankeen_Kestrel
+Dense Forests,pland,6.644,Nankeen_Kestrel
+Open Forests,pland,7.283,Nankeen_Kestrel
+Forest/Cropland Mosaics,pland,0.018,Nankeen_Kestrel
+Natural Herbaceous,pland,22.738,Nankeen_Kestrel
+Herbaceous Croplands,pland,4.157,Nankeen_Kestrel
+Shrublands,pland,55.285,Nankeen_Kestrel
+Unclassified Land,pland,0.006,Nankeen_Kestrel
+Barren Land,pland,1.937,Nankeen_Kestrel
+Permanent Snow and Ice,pland,0,Nankeen_Kestrel
+Water Bodies,pland,1.81,Nankeen_Kestrel
+Dense Forests,pland,6.45,Nankeen_Kestrel
+Open Forests,pland,7.338,Nankeen_Kestrel
+Woody Wetlands,pland,0.251,Nankeen_Kestrel
+Grasslands,pland,26.83,Nankeen_Kestrel
+Shrublands,pland,55.283,Nankeen_Kestrel
+Herbaceous Wetlands,pland,0.095,Nankeen_Kestrel
+Tundra,pland,0,Nankeen_Kestrel
+Unclassified Land,pland,0.002,Rock_Kestrel
+Barren Land,pland,2.485,Rock_Kestrel
+Permanent Snow and Ice,pland,0,Rock_Kestrel
+Water Bodies,pland,1.696,Rock_Kestrel
+Evergreen Needleleaf Forests,pland,0.008,Rock_Kestrel
+Evergreen Broadleaf Forests,pland,13.686,Rock_Kestrel
+Deciduous Broadleaf Forests,pland,1.71,Rock_Kestrel
+Mixed Broadleaf/Needleleaf Forests,pland,0.004,Rock_Kestrel
+Mixed Broadleaf Evergreen/Deciduous Forests,pland,1.473,Rock_Kestrel
+Open Forests,pland,8.351,Rock_Kestrel
+Sparse Forests,pland,25.102,Rock_Kestrel
+Dense Herbaceous,pland,32.548,Rock_Kestrel
+Sparse Herbaceous,pland,0.238,Rock_Kestrel
+Dense Shrublands,pland,0.75,Rock_Kestrel
+Shrubland/Grassland Mosaics,pland,7.206,Rock_Kestrel
+Sparse Shrublands,pland,4.742,Rock_Kestrel
+Unclassified Land,pland,0.002,Rock_Kestrel
+Barren Land,pland,2.482,Rock_Kestrel
+Permanent Snow and Ice,pland,0,Rock_Kestrel
+Water Bodies,pland,1.696,Rock_Kestrel
+Urban and Built-up Lands,pland,0.212,Rock_Kestrel
+Dense Forests,pland,16.881,Rock_Kestrel
+Open Forests,pland,33.221,Rock_Kestrel
+Forest/Cropland Mosaics,pland,0.17,Rock_Kestrel
+Natural Herbaceous,pland,30.759,Rock_Kestrel
+Natural Herbaceous/Cropland Mosaics,pland,0.038,Rock_Kestrel
+Herbaceous Croplands,pland,1.852,Rock_Kestrel
+Shrublands,pland,12.689,Rock_Kestrel
+Unclassified Land,pland,0.002,Rock_Kestrel
+Barren Land,pland,2.485,Rock_Kestrel
+Permanent Snow and Ice,pland,0,Rock_Kestrel
+Water Bodies,pland,1.696,Rock_Kestrel
+Dense Forests,pland,16.781,Rock_Kestrel
+Open Forests,pland,33.368,Rock_Kestrel
+Woody Wetlands,pland,0.186,Rock_Kestrel
+Grasslands,pland,32.553,Rock_Kestrel
+Shrublands,pland,12.69,Rock_Kestrel
+Herbaceous Wetlands,pland,0.24,Rock_Kestrel
+Tundra,pland,0.001,Rock_Kestrel
+Barren Land,pland,0.217,Seychelles_Kestrel
+Water Bodies,pland,90.08,Seychelles_Kestrel
+Evergreen Needleleaf Forests,pland,0.072,Seychelles_Kestrel
+Evergreen Broadleaf Forests,pland,1.883,Seychelles_Kestrel
+Open Forests,pland,2.896,Seychelles_Kestrel
+Sparse Forests,pland,1.014,Seychelles_Kestrel
+Dense Herbaceous,pland,3.621,Seychelles_Kestrel
+Sparse Herbaceous,pland,0.217,Seychelles_Kestrel
+Barren Land,pland,0.217,Seychelles_Kestrel
+Water Bodies,pland,90.08,Seychelles_Kestrel
+Urban and Built-up Lands,pland,0.145,Seychelles_Kestrel
+Dense Forests,pland,1.955,Seychelles_Kestrel
+Open Forests,pland,3.838,Seychelles_Kestrel
+Natural Herbaceous,pland,3.693,Seychelles_Kestrel
+Herbaceous Croplands,pland,0.072,Seychelles_Kestrel
+Barren Land,pland,0.217,Seychelles_Kestrel
+Water Bodies,pland,90.08,Seychelles_Kestrel
+Dense Forests,pland,0.579,Seychelles_Kestrel
+Open Forests,pland,2.462,Seychelles_Kestrel
+Woody Wetlands,pland,2.824,Seychelles_Kestrel
+Grasslands,pland,2.172,Seychelles_Kestrel
+Herbaceous Wetlands,pland,1.665,Seychelles_Kestrel
+Unclassified Land,pland,0.099,Spotted_Kestrel
+Barren Land,pland,0.026,Spotted_Kestrel
+Water Bodies,pland,17.461,Spotted_Kestrel
+Evergreen Needleleaf Forests,pland,0.011,Spotted_Kestrel
+Evergreen Broadleaf Forests,pland,39.192,Spotted_Kestrel
+Deciduous Needleleaf Forests,pland,0,Spotted_Kestrel
+Deciduous Broadleaf Forests,pland,0.441,Spotted_Kestrel
+Mixed Broadleaf/Needleleaf Forests,pland,0.001,Spotted_Kestrel
+Mixed Broadleaf Evergreen/Deciduous Forests,pland,0.032,Spotted_Kestrel
+Open Forests,pland,13.009,Spotted_Kestrel
+Sparse Forests,pland,19.062,Spotted_Kestrel
+Dense Herbaceous,pland,10.586,Spotted_Kestrel
+Sparse Herbaceous,pland,0.077,Spotted_Kestrel
+Dense Shrublands,pland,0.003,Spotted_Kestrel
+Unclassified Land,pland,0.067,Spotted_Kestrel
+Barren Land,pland,0.019,Spotted_Kestrel
+Water Bodies,pland,17.461,Spotted_Kestrel
+Urban and Built-up Lands,pland,2.279,Spotted_Kestrel
+Dense Forests,pland,39.667,Spotted_Kestrel
+Open Forests,pland,19.474,Spotted_Kestrel
+Forest/Cropland Mosaics,pland,10.881,Spotted_Kestrel
+Natural Herbaceous,pland,3.226,Spotted_Kestrel
+Natural Herbaceous/Cropland Mosaics,pland,0,Spotted_Kestrel
+Herbaceous Croplands,pland,6.922,Spotted_Kestrel
+Shrublands,pland,0.003,Spotted_Kestrel
+Unclassified Land,pland,0.099,Spotted_Kestrel
+Barren Land,pland,0.026,Spotted_Kestrel
+Water Bodies,pland,17.461,Spotted_Kestrel
+Dense Forests,pland,39,Spotted_Kestrel
+Open Forests,pland,31.807,Spotted_Kestrel
+Woody Wetlands,pland,0.941,Spotted_Kestrel
+Grasslands,pland,10.253,Spotted_Kestrel
+Shrublands,pland,0.003,Spotted_Kestrel
+Herbaceous Wetlands,pland,0.41,Spotted_Kestrel

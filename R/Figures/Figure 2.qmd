@@ -1,0 +1,82 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(paletteer)
+library(patchwork)
+
+dat <- list.files(path = "Results/Habitat Associations/", pattern = "predictor_importance", full.names = T) |> 
+  map(read_csv) |> 
+  list_rbind() |> 
+  filter(str_detect(predictor, 'pland_LC|pland_AST|ALAN'))
+
+LC_type <- dat |> 
+  arrange(predictor) |> 
+  distinct(predictor) |> 
+  mutate(LC_type = c("Dense", "Open", "Open", "Open", "Open", "Open", "Dense", "Dense", "Dense", "Dense", "Dense", "Dense", "Dense", "Dense", "Open", "Open", "Open", "Open", "Open", "Dense", "Open", "Open", "Dense", "Open", "Open"),
+  LC_category = c("ALAN", "Water Body", "Water Body", "Water Body", "Barren", "Snow & Ice", "Forest", "Forest", "Forest", "Forest", "Forest", "Forest", "Forest", "Forest", "Herbaceous Plant Cover", "Herbaceous Plant Cover", "Shrubland", "Mixed", "Shrubland", "Mixed", "Mixed", "Cropland", "Wetland", "Wetland", "Tundra"))
+
+dat <- dat |> 
+  left_join(LC_type, by = "predictor")
+
+# save for supplementary
+write_csv(dat, file = "Supplementary file S3.csv")
+
+# top 5 most important land cover predictors dataframe
+top_preds_df <- dat |> 
+  group_by(species) |> 
+  mutate(order = dplyr::row_number()) |>
+  ungroup() |> 
+  mutate(order = as_factor(order),
+         predictor = as_factor(predictor)) |> 
+  count(order, predictor, .drop = F) |>
+  ungroup() |> 
+  mutate(order = as.numeric(order)) |> 
+  filter(order <= 5) |> 
+  arrange(desc(n)) |> 
+  filter(any(n  != 0), .by = predictor) %>% 
+  dplyr::group_by(predictor) %>% 
+  mutate(total = sum(n)) %>% 
+  arrange(desc(total)) |> 
+  ungroup()|> 
+  mutate(predictor = case_when(
+    predictor == "pland_ASTWBD_c01_ocean" ~ "Oceans",
+    predictor == "pland_ASTWBD_c02_river" ~ "Rivers",
+    predictor == "pland_ASTWBD_c03_lake" ~ "Lakes",
+    predictor == "ALAN_mean" ~ "ALAN", 
+    predictor == "pland_LCCS1_c01_barren" ~ "Barren Land",
+    predictor == "pland_LCCS1_c12_evergreen_broadleaf" ~ "Evergreen Broadleaf Forests",
+    predictor == "pland_LCCS1_c14_deciduous_broadleaf" ~ "Deciduous Broadleaf Forests",
+    predictor == "pland_LCCS1_c21_open_forest" ~ "Open Forests",
+    predictor == "pland_LCCS1_c22_sparse_forest" ~ "Sparse Forests",
+    predictor == "pland_LCCS1_c31_dense_herbaceous" ~ "Dense Herbaceous Plant Cover",   predictor == "pland_LCCS1_c32_sparse_herbaceous" ~ "Sparse Herbaceous Plant Cover",
+    predictor == "pland_LCCS1_c42_shrubland_grassland_mosaic" ~ "Shrubland/Grassland Mosaic", 
+    predictor == "pland_LCCS1_c43_sparse_shrubland" ~ "Sparse Shrubland",
+    predictor == "pland_LCCS2_c25_forest_cropland_mosaic" ~ "Forest/Cropland mosaic",
+    predictor == "pland_LCCS2_c36_herbaceous_cropland" ~ "Herbaceous Cropland",
+    predictor == "pland_LCCS3_c27_woody_wetland" ~ "Woody Wetlands",
+    predictor == "pland_LCCS3_c50_herbaceous_wetland" ~ "Herbaceous Wetlands",
+                               .default = predictor))
+
+#plot 
+top_preds_plot <- top_preds_df |> 
+  ggplot(aes(x = fct_infreq(predictor, total),
+             y = n,
+             fill = factor(order))) +
+  geom_col(position = position_dodge2(reverse = T), width = 0.7) +
+  labs(x = "",
+       y = "Number of Species") +
+  coord_flip() +
+  scale_x_discrete(limits = rev) +
+  guides(fill = guide_legend(title = "Predictor Importance\nRanking")) +
+  scale_fill_paletteer_d("ltc::minou") +
+  theme_bw()
+
+#save
+ggsave("Figures/Figure_2.png", top_preds_plot, dpi = 800)
+
+```

@@ -1,0 +1,609 @@
+---
+title: "landscape composition"
+format: html
+editor: visual
+---
+
+```{r}
+library(terra)
+library(sf)
+library(landscapemetrics)
+library(dplyr)
+library(tidyr)
+library(purrr)
+library(readr)
+library(stringr)
+library(ggplot2)
+library(performance)
+library(patchwork)
+library(gtsummary)
+library(gt)
+
+landscape_metrics_Aus <- function(city){
+  
+  message(paste0("Analyzing ", city))
+  
+  # City raster
+  city_raster <- rast(paste0("Data/City Land Cover Dynamic World/", city, "_LC_DW.tif")) |> 
+    tidyterra::select(label2_mode) |> 
+    terra::project('EPSG: 8859')
+  
+  # City shapefile
+  city_shapefile <- read_sf(paste0("Data/City Shapefiles/", city, "_Shapefile.shp")) |> st_transform(crs = 8859)
+  
+  # Crop
+  city_cropped <- terra::crop(city_raster, city_shapefile) |> 
+    mask(city_shapefile)
+  
+  # Calculate % land cover
+  city_lsm <- calculate_lsm(city_cropped, level = "class", metric = c("pland", "ed"), verbose = FALSE) |> 
+    mutate(city = city,
+           value = round(value, 3),
+           class = case_when(class == '1' ~ 'Water',
+                           class == '2' ~ 'Trees',
+                           class == '3' ~ 'Grass',
+                           class == '4' ~ 'Flooded vegetation',
+                           class == '5' ~ 'Crops',
+                           class == '6' ~ 'Shrub and scrub',
+                           class == '7' ~ 'Built',
+                           class == '8' ~ 'Bare',
+                           class == '9' ~ 'Snow and ice')) |> 
+    select(class, metric, value, city)
+  
+  return(city_lsm)
+}
+
+landscape_metrics_Euro <- function(city){
+  
+  message(paste0("Analyzing ", city))
+  
+  # City raster
+  city_raster <- rast(paste0("Data/City Land Cover Dynamic World/", city, "_LC_DW.tif")) |> 
+    tidyterra::select(label2_mode) |> 
+    terra::project('EPSG: 8857')
+  
+  # City shapefile
+  city_shapefile <- read_sf(paste0("Data/City Shapefiles/", city, "_Shapefile.shp")) |> st_transform(crs = 8857)
+  
+  # Crop
+  city_cropped <- terra::crop(city_raster, city_shapefile) |> 
+    mask(city_shapefile)
+  
+  # Calculate % land cover
+  city_lsm <- calculate_lsm(city_cropped, level = "class", metric = c("pland", "ed"), verbose = FALSE) |> 
+    mutate(city = city,
+           value = round(value, 3),
+           class = case_when(class == '1' ~ 'Water',
+                           class == '2' ~ 'Trees',
+                           class == '3' ~ 'Grass',
+                           class == '4' ~ 'Flooded vegetation',
+                           class == '5' ~ 'Crops',
+                           class == '6' ~ 'Shrub and scrub',
+                           class == '7' ~ 'Built',
+                           class == '8' ~ 'Bare',
+                           class == '9' ~ 'Snow and ice')) |> 
+    select(class, metric, value, city)
+  
+  return(city_lsm)
+}
+
+landscape_metrics_America <- function(city){
+  
+  message(paste0("Analyzing ", city))
+  
+  # City raster
+  city_raster <- rast(paste0("Data/City Land Cover Dynamic World/", city, "_LC_DW.tif")) |> 
+    tidyterra::select(label2_mode) |> 
+    terra::project('EPSG: 8858')
+  
+  # City shapefile
+  city_shapefile <- read_sf(paste0("Data/City Shapefiles/", city, "_Shapefile.shp")) |> st_transform(crs = 8858)
+  
+  # Crop
+  city_cropped <- terra::crop(city_raster, city_shapefile) |> 
+    mask(city_shapefile)
+  
+  # Calculate % land cover and edge density
+  city_lsm <- calculate_lsm(city_cropped, level = "class", metric = c("pland", "ed"), verbose = FALSE) |> 
+    mutate(city = city,
+           value = round(value, 3),
+           class = case_when(class == '1' ~ 'Water',
+                           class == '2' ~ 'Trees',
+                           class == '3' ~ 'Grass',
+                           class == '4' ~ 'Flooded vegetation',
+                           class == '5' ~ 'Crops',
+                           class == '6' ~ 'Shrub and scrub',
+                           class == '7' ~ 'Built',
+                           class == '8' ~ 'Bare',
+                           class == '9' ~ 'Snow and ice')) |> 
+    select(class, metric, value, city)
+  
+  return(city_lsm)
+}
+
+city_names_Aus <- c("Adelaide", 
+                "Perth", 
+                "Darwin",
+                "Brisbane",
+                "Sydney",
+                "Canberra",
+                "Melbourne")
+
+city_names_Euro <- c("Rome",
+                "Vienna",
+                "Lisbon",
+                "Berlin",
+                "London",
+                "Madrid",
+                "Paris",
+                "Prague")
+                
+city_names_America <- c("Lima",
+                "Quito",
+                "Santiago",
+                "BuenosAires",
+                "Boston",
+                "Calgary",
+                "Chicago",
+                "Columbus",
+                "Dallas",
+                "Denver", 
+                "Houston",
+                "Indianapolis",
+                "Jacksonville",
+                "LosAngeles", 
+                "Miami",
+                "Montreal",
+                "NewYork",
+                "Ottawa",
+                "Philadelphia",
+                "Phoenix",
+                "SanAntonio",
+                "SanDiego")
+  
+
+Metrics_df_Aus <- map(city_names_Aus, landscape_metrics_Aus) |> 
+         list_rbind()
+
+Metrics_df_Euro <- map(city_names_Euro, landscape_metrics_Euro) |> 
+         list_rbind()
+
+Metrics_df_America <- map(city_names_America, landscape_metrics_America) |>
+         list_rbind()
+
+Metrics_df_complete <- bind_rows(Metrics_df_Aus, Metrics_df_Euro, Metrics_df_America)
+
+# Save
+write_csv(Metrics_df_complete, "Results/Landscape Analysis/City_land_cover_metrics.csv")
+
+```
+
+```{r}
+## Join Occupancy data to land cover metrics data ##
+
+# Occupancy modelling results
+dat <- list.files(path = "Results/Occupancy models/",pattern = "_model_summary", full.names = TRUE)
+
+Cities <- map_dfr(dat, read_csv) %>% 
+  mutate(species_city = str_remove(species_city, "Nankeen_Kestrel_|Eurasian_Kestrel_|American_Kestrel_"))
+
+# Make names more descriptive
+Cities <- Cities |> 
+  mutate(term = case_when(term == "GRASS" ~ "Grassland",
+                          term == "TREES" ~ "Tree Cover",
+                          term == "URBAN" ~ "Urban Land Cover",
+                          term == "SHRUB" ~ "Shrubland",
+                          term == "CROPS" ~ "Cropland")) |> 
+  rename("class" = "term",
+         "city" = "species_city") |> 
+  select(class, Mean, city)
+
+# filter to classes of interest and make names match across data
+Metrics_df <- Metrics_df_complete |> 
+  filter(class %in% c("Trees", "Grass", "Crops", "Shrub and scrub", "Built")) |> 
+  mutate(class = case_when(class == "Grass" ~ "Grassland",
+                          class == "Trees" ~ "Tree Cover",
+                          class == "Built" ~ "Urban Land Cover",
+                          class == "Shrub and scrub" ~ "Shrubland",
+                          class == "Crops" ~ "Cropland"))
+
+# Join together
+mod_df <- full_join(Cities, Metrics_df, by = c("city", "class"))
+```
+
+```{r}
+# Modelling
+
+# Nest data for modelling
+mod_nest <- mod_df |> 
+  group_by(metric, class) |> 
+  nest()
+
+# Function to run a linear model for each metric and class combo
+metric_model <- function(df) {
+  lm(Mean ~ value, data = df)
+}
+
+#Data frame to store models and their output in tidy fashion
+mod_nest <- mod_nest |> 
+  mutate(model = map(data, metric_model),
+         tidy = map(model, broom::tidy),
+         augment = map(model, broom::augment))
+
+# Check model assumptions
+mod_check <- map(mod_nest$model, check_model)
+
+mod_check
+
+#All good
+
+#Dataframe for model output
+mod_output <- mod_nest |> 
+  select(tidy) |> 
+  unnest(tidy) |> 
+  filter(term == "value")
+
+#Plotting
+
+plots_ed <- mod_nest |>
+  filter(metric == "ed") |> 
+  mutate(plot = map(
+    data, 
+    ~ ggplot(data = .x, aes(x = Mean, y = value)) +
+      geom_point()+
+      geom_smooth(method = "lm")+
+      labs(x = "Mean Posterior Estimate",
+           y = "Edge Density",
+           subtitle = paste0(class))))
+
+plots_pland <- mod_nest |>
+  filter(metric == "pland") |> 
+  mutate(plot = map(
+    data, 
+    ~ ggplot(data = .x, aes(x = Mean, y = value)) +
+      geom_point()+
+      geom_smooth(method = "lm")+
+      labs(x = "Mean Posterior Estimate",
+           y = "% Land Cover",
+           subtitle = paste0(class))))
+
+# Bind for tidy dataframe
+mod_nest <- bind_rows(plots_pland, plots_ed)
+
+
+# Pulication ready plots
+# Edge Density 
+
+ed_plot <-  plots_ed |> 
+  ungroup() |> 
+  select(plot)
+
+p_ed <- ed_plot[[1]]
+
+ed_plot <- p_ed[[1]] +p_ed[[2]] + p_ed[[3]] + p_ed[[4]] +p_ed[[5]] + plot_annotation(tag_levels = 'A')
+
+# Save
+#ggsave("Figures/Edge_Density_Occupancy.png", plot = ed_plot, dpi = 800)
+
+# % Land Cover
+
+pland_plot <-  plots_pland |> 
+  ungroup() |> 
+  select(plot)
+
+p_pland <- pland_plot[[1]]
+
+pland_plot <- p_pland[[1]] +p_pland[[2]] + p_pland[[3]] + p_pland[[4]] +p_pland[[5]] + plot_annotation(tag_levels = 'A')
+
+# Save
+#ggsave("Figures/Percent_Land_Cover_Occupancy.png", plot = pland_plot, dpi = 800)
+
+# Publication ready table
+
+# Edge density
+mod_ed_grassland <- mod_df |> 
+                      filter(metric == "ed" & class == "Grassland") |> 
+                      lm(Mean ~ value, data = _)
+
+tbl_ed_grassland <- tbl_regression(mod_ed_grassland, intercept = TRUE) |>
+  bold_p() |> 
+  modify_column_unhide(columns = c(statistic, std.error)) |> 
+  modify_header(label = "**Class**", estimate = "**Estimate**") %>% 
+   modify_table_body(~.x  %>% 
+      mutate(groupname_col = "Grassland")) 
+
+mod_ed_cropland <- mod_df |> 
+                      filter(metric == "ed" & class == "Cropland") |> 
+                      lm(Mean ~ value, data = _)
+
+tbl_ed_cropland <- tbl_regression(mod_ed_cropland, intercept = TRUE) |>
+  bold_p() |> 
+  modify_column_unhide(columns = c(statistic, std.error)) |> 
+  modify_header(label = "**Class**", estimate = "**Estimate**") %>% 
+   modify_table_body(~.x  %>% 
+      mutate(groupname_col = "Cropland")) 
+
+mod_ed_shrubland <- mod_df |> 
+                      filter(metric == "ed" & class == "Shrubland") |> 
+                      lm(Mean ~ value, data = _)
+
+tbl_ed_shrubland <- tbl_regression(mod_ed_shrubland, intercept = TRUE) |>
+  bold_p() |> 
+  modify_column_unhide(columns = c(statistic, std.error)) |> 
+  modify_header(label = "**Class**", estimate = "**Estimate**") %>% 
+   modify_table_body(~.x  %>% 
+      mutate(groupname_col = "Shrubland")) 
+
+mod_ed_urban <- mod_df |> 
+                      filter(metric == "ed" & class == "Urban Land Cover") |> 
+                      lm(Mean ~ value, data = _)
+
+tbl_ed_urban <- tbl_regression(mod_ed_urban, intercept = TRUE) |>
+  bold_p() |> 
+  modify_column_unhide(columns = c(statistic, std.error)) |> 
+  modify_header(label = "**Class**", estimate = "**Estimate**") %>% 
+   modify_table_body(~.x  %>% 
+      mutate(groupname_col = "Urban Land Cover")) 
+
+mod_ed_tree <- mod_df |> 
+                      filter(metric == "ed" & class == "Tree Cover") |> 
+                      lm(Mean ~ value, data = _)
+
+tbl_ed_tree <- tbl_regression(mod_ed_tree, intercept = TRUE) |>
+  bold_p() |> 
+  modify_column_unhide(columns = c(statistic, std.error)) |> 
+  modify_header(label = "**Class**", estimate = "**Estimate**") %>% 
+   modify_table_body(~.x  %>% 
+      mutate(groupname_col = "Tree Cover")) 
+
+
+#Stack together
+tbl_stack(list(tbl_ed_grassland, tbl_ed_tree, tbl_ed_urban, tbl_ed_shrubland, tbl_ed_cropland)) |> 
+  as_gt() |> 
+  gtsave("Figures/ED_models_tab.docx")
+
+
+
+# % Land Cover
+mod_pland_grassland <- mod_df |> 
+                      filter(metric == "pland" & class == "Grassland") |> 
+                      lm(Mean ~ value, data = _)
+
+tbl_pland_grassland <- tbl_regression(mod_pland_grassland, intercept = TRUE) |>
+  bold_p() |> 
+  modify_column_unhide(columns = c(statistic, std.error)) |> 
+  modify_header(label = "**Class**", estimate = "**Estimate**") %>% 
+   modify_table_body(~.x  %>% 
+      mutate(groupname_col = "Grassland")) 
+
+mod_pland_cropland <- mod_df |> 
+                      filter(metric == "pland" & class == "Cropland") |> 
+                      lm(Mean ~ value, data = _)
+
+tbl_pland_cropland <- tbl_regression(mod_pland_cropland, intercept = TRUE) |>
+  bold_p() |> 
+  modify_column_unhide(columns = c(statistic, std.error)) |> 
+  modify_header(label = "**Class**", estimate = "**Estimate**") %>% 
+   modify_table_body(~.x  %>% 
+      mutate(groupname_col = "Cropland")) 
+
+mod_pland_shrubland <- mod_df |> 
+                      filter(metric == "pland" & class == "Shrubland") |> 
+                      lm(Mean ~ value, data = _)
+
+tbl_pland_shrubland <- tbl_regression(mod_pland_shrubland, intercept = TRUE) |>
+  bold_p() |> 
+  modify_column_unhide(columns = c(statistic, std.error)) |> 
+  modify_header(label = "**Class**", estimate = "**Estimate**") %>% 
+   modify_table_body(~.x  %>% 
+      mutate(groupname_col = "Shrubland")) 
+
+mod_pland_urban <- mod_df |> 
+                      filter(metric == "pland" & class == "Urban Land Cover") |> 
+                      lm(Mean ~ value, data = _)
+
+tbl_pland_urban <- tbl_regression(mod_pland_urban, intercept = TRUE) |>
+  bold_p() |> 
+  modify_column_unhide(columns = c(statistic, std.error)) |> 
+  modify_header(label = "**Class**", estimate = "**Estimate**") %>% 
+   modify_table_body(~.x  %>% 
+      mutate(groupname_col = "Urban Land Cover")) 
+
+mod_pland_tree <- mod_df |> 
+                      filter(metric == "pland" & class == "Tree Cover") |> 
+                      lm(Mean ~ value, data = _)
+
+tbl_pland_tree <- tbl_regression(mod_pland_tree, intercept = TRUE) |>
+  bold_p() |> 
+  modify_column_unhide(columns = c(statistic, std.error)) |> 
+  modify_header(label = "**Class**", estimate = "**Estimate**") %>% 
+   modify_table_body(~.x  %>% 
+      mutate(groupname_col = "Tree Cover")) 
+
+
+#Stack together
+tbl_stack(list(tbl_pland_grassland, tbl_pland_tree, tbl_pland_urban, tbl_pland_shrubland, tbl_pland_cropland)) |> 
+  as_gt() |> 
+  gtsave("Figures/PLAND_models_tab.docx")
+```
+
+```{r}
+# Percent land cover for land cover types modelled across each Kestrel species range
+#LCCS1
+
+landscape_analysis_LCCS1 <- function(species){
+  
+  message(paste0("Analyzing ", species))
+  
+  # City raster
+  range_raster <- rast(paste0("Data/Kestrel Distribution Land Cover MODIS/", species, "_LCCS1.tif")) |> 
+    tidyterra::select("2022")
+  
+  # City shapefile
+  range_shapefile <- read_sf(paste0("Data/Kestrel Distributions/", species, "_Distribution.shp")) |> st_transform(crs = crs(range_raster))
+  
+  # Crop
+  species_range_cropped <- terra::crop(range_raster, range_shapefile) |> 
+    mask(range_shapefile)
+  
+  # Calculate % land cover
+  species_lsm <- calculate_lsm(species_range_cropped, level = "class", metric = "pland", verbose = FALSE) |> 
+    mutate(species = species,
+           value = round(value, 3),  
+           class = case_when(class == '0' ~ "Unclassified Land",
+                           class == '1' ~ 'Barren Land',
+                           class == '2' ~ 'Permanent Snow and Ice',
+                           class == '3' ~ 'Water Bodies',
+                           class == '11' ~ 'Evergreen Needleleaf Forests',
+                           class == '12' ~ 'Evergreen Broadleaf Forests',
+                           class == '13' ~ 'Deciduous Needleleaf Forests',
+                           class == '14' ~ 'Deciduous Broadleaf Forests',
+                           class == '15' ~ 'Mixed Broadleaf/Needleleaf Forests',
+                           class == '16' ~ 'Mixed Broadleaf Evergreen/Deciduous Forests',
+                           class == '21' ~ 'Open Forests',
+                           class == '22' ~ 'Sparse Forests',
+                           class == '31' ~ 'Dense Herbaceous',
+                           class == '32' ~ 'Sparse Herbaceous',
+                           class == '41' ~ 'Dense Shrublands',
+                           class == '42' ~ 'Shrubland/Grassland Mosaics',
+                           class == '43' ~ 'Sparse Shrublands')) |> 
+    select(class, metric, value, species)
+  
+  return(species_lsm)
+}
+
+species_names <- c("American_Kestrel",
+                   "Banded_Kestrel",
+                   "Dickinsons_Kestrel",
+                   "Eurasian_Kestrel",
+                   "Fox_Kestrel",
+                   "Greater_Kestrel",
+                   "Grey_Kestrel",
+                   "Lesser_Kestrel",
+                   "Malagasy_Kestrel",
+                   "Mauritius_Kestrel",
+                   "Nankeen_Kestrel",
+                   "Rock_Kestrel",
+                   "Seychelles_Kestrel",
+                   "Spotted_Kestrel")
+
+LCCS1_df <- map(species_names, landscape_analysis_LCCS1) |> 
+         list_rbind()
+
+#LCCS2
+
+landscape_analysis_LCCS1 <- function(species){
+  
+  message(paste0("Analyzing ", species))
+  
+  # City raster
+  range_raster <- rast(paste0("Data/Kestrel Distribution Land Cover MODIS/", species, "_LCCS2.tif")) |> 
+    tidyterra::select("2022")
+  
+  # City shapefile
+  range_shapefile <- read_sf(paste0("Data/Kestrel Distributions/", species, "_Distribution.shp")) |> st_transform(crs = crs(range_raster))
+  
+  # Crop
+  species_range_cropped <- terra::crop(range_raster, range_shapefile) |> 
+    mask(range_shapefile)
+  
+  # Calculate % land cover
+  species_lsm <- calculate_lsm(species_range_cropped, level = "class", metric = "pland", verbose = FALSE) |> 
+    mutate(species = species,
+           value = round(value, 3),  
+           class = case_when(class == '0' ~ "Unclassified Land",
+                           class == '1' ~ 'Barren Land',
+                           class == '2' ~ 'Permanent Snow and Ice',
+                           class == '3' ~ 'Water Bodies',
+                           class == '9' ~ 'Urban and Built-up Lands',
+                           class == '10' ~ 'Dense Forests',
+                           class == '20' ~ 'Open Forests',
+                           class == '25' ~ 'Forest/Cropland Mosaics',
+                           class == '30' ~ 'Natural Herbaceous',
+                           class == '35' ~ 'Natural Herbaceous/Cropland Mosaics',
+                           class == '36' ~ 'Herbaceous Croplands',
+                           class == '40' ~ 'Shrublands')) |> 
+    select(class, metric, value, species)
+  
+  return(species_lsm)
+}
+
+species_names <- c("American_Kestrel",
+                   "Banded_Kestrel",
+                   "Dickinsons_Kestrel",
+                   "Eurasian_Kestrel",
+                   "Fox_Kestrel",
+                   "Greater_Kestrel",
+                   "Grey_Kestrel",
+                   "Lesser_Kestrel",
+                   "Malagasy_Kestrel",
+                   "Mauritius_Kestrel",
+                   "Nankeen_Kestrel",
+                   "Rock_Kestrel",
+                   "Seychelles_Kestrel",
+                   "Spotted_Kestrel")
+
+LCCS2_df <- map(species_names, landscape_analysis_LCCS2) |> 
+         list_rbind()
+
+
+#LCCS3
+landscape_analysis_LCCS1 <- function(species){
+  
+  message(paste0("Analyzing ", species))
+  
+  # City raster
+  range_raster <- rast(paste0("Data/Kestrel Distribution Land Cover MODIS/", species, "_LCCS3.tif")) |> 
+    tidyterra::select("2022")
+  
+  # City shapefile
+  range_shapefile <- read_sf(paste0("Data/Kestrel Distributions/", species, "_Distribution.shp")) |> st_transform(crs = crs(range_raster))
+  
+  # Crop
+  species_range_cropped <- terra::crop(range_raster, range_shapefile) |> 
+    mask(range_shapefile)
+  
+  # Calculate % land cover
+  species_lsm <- calculate_lsm(species_range_cropped, level = "class", metric = "pland", verbose = FALSE) |> 
+    mutate(species = species,
+           value = round(value, 3),  
+           class = case_when(class == '0' ~ "Unclassified Land",
+                           class == '1' ~ 'Barren Land',
+                           class == '2' ~ 'Permanent Snow and Ice',
+                           class == '3' ~ 'Water Bodies',
+                           class == '10' ~ 'Dense Forests',
+                           class == '20' ~ 'Open Forests',
+                           class == '27' ~ 'Woody Wetlands',
+                           class == '30' ~ 'Grasslands',
+                           class == '40' ~ 'Shrublands',
+                           class == '50' ~ 'Herbaceous Wetlands',
+                           class == '51' ~ 'Tundra')) |> 
+    select(class, metric, value, species)
+  
+  return(species_lsm)
+}
+
+species_names <- c("American_Kestrel",
+                   "Banded_Kestrel",
+                   "Dickinsons_Kestrel",
+                   "Eurasian_Kestrel",
+                   "Fox_Kestrel",
+                   "Greater_Kestrel",
+                   "Grey_Kestrel",
+                   "Lesser_Kestrel",
+                   "Malagasy_Kestrel",
+                   "Mauritius_Kestrel",
+                   "Nankeen_Kestrel",
+                   "Rock_Kestrel",
+                   "Seychelles_Kestrel",
+                   "Spotted_Kestrel")
+
+LCCS3_df <- map(species_names, landscape_analysis_LCCS3) |> 
+         list_rbind()
+
+#Bind together
+Kestrel_range_PLAND <- bind_rows(LCCS1_df, LCCS2_df, LCCS3_df)
+
+# Save
+write_csv(Kestrel_range_PLAND, "Results/Landscape Analysis/Kestrel_distribution_pland.csv")
+```

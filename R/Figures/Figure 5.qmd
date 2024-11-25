@@ -1,0 +1,127 @@
+---
+title: "Figure 5"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(patchwork)
+
+# Read in files
+Cities <- read_csv("Results/Occupancy models/Kestrel_Occupancy_model_summary.csv") %>% 
+  mutate(species_city = str_remove(species_city, "Nankeen_Kestrel_|Eurasian_Kestrel_|American_Kestrel_"))
+
+# Rename land cover and city names
+Cities <- Cities |> 
+  mutate(term = case_when(term == "GRASS" ~ "Grassland",
+                          term == "TREES" ~ "Tree Cover",
+                          term == "URBAN" ~ "Urban Land Cover",
+                          term == "SHRUB" ~ "Shrubland",
+                          term == "CROPS" ~ "Cropland",
+                          ),
+  species_city = case_when(species_city == "BuenosAires" ~ "Buenos Aires",
+                           species_city == "SanAntonio" ~ "San Antonio",
+                           species_city == "SanDiego" ~ "San Diego",
+                           species_city == "NewYork" ~ "New York",
+                           species_city == "LosAngeles" ~ "Los Angeles",
+                           .default = species_city))
+
+```
+
+```{r}
+
+Euro <- Cities %>%
+  filter(species_city %in%  c("Berlin", "Lisbon", "London", "Madrid", "Paris", "Prague", "Rome", "Vienna")) %>% 
+  mutate(city = fct_reorder(term, Mean)) |>  
+  ggplot(aes(x = Mean, y = species_city)) +
+  geom_vline(xintercept = 0, linewidth = 0.25, color = "black") +
+  geom_point(aes(colour = term), position = position_dodge(width = 0.7)) +
+  geom_errorbarh(aes(xmin = `2.5%`, xmax = `97.5%`,     height = 0.5, colour = term), position = position_dodge(width = 0.7)) +
+  scale_colour_manual(values = c('Urban Land Cover' = "#c4281b", 'Tree Cover' = "#397d49", 'Shrubland' = "#dfc35a", 'Grassland' = "#88b053", 'Cropland' = "#e49635")) +
+  theme_bw() +
+  labs(x = "Posterior Mean",
+       y = "",
+       subtitle = "Europe") +
+  theme(legend.background = element_blank(),
+        legend.box.background = element_rect(colour = "black"))+
+  guides(colour = guide_legend(reverse = T,
+                               title = "Land cover type"))+
+  scale_y_discrete(limits = rev)
+
+Aus <- Cities %>%
+  filter(species_city %in%  c("Adelaide", "Darwin", "Melbourne", "Perth", "Canberra", "Sydney", "Brisbane")) %>% 
+  mutate(city = fct_reorder(term, Mean)) |>  
+  ggplot(aes(x = Mean, y = species_city)) +
+  geom_vline(xintercept = 0, linewidth = 0.25, color = "black") +
+  geom_point(aes(colour = term), position = position_dodge(width = 0.7)) +
+  geom_errorbarh(aes(xmin = `2.5%`, xmax = `97.5%`,     height = 0.5, colour = term), position = position_dodge(width = 0.7)) +
+  scale_colour_manual(values = c('Urban Land Cover' = "#c4281b", 'Tree Cover' = "#397d49", 'Shrubland' = "#dfc35a", 'Grassland' = "#88b053", 'Cropland' = "#e49635")) +
+  theme_bw() +
+  labs(x = "Posterior Mean",
+       y = "",
+       subtitle = "Australia") +
+  theme(legend.background = element_blank(),
+        legend.box.background = element_rect(colour = "black"))+
+  guides(colour = guide_legend(reverse = T,
+                               title = "Land cover type")) +
+  scale_y_discrete(limits = rev)
+
+N_A_1 <- Cities %>%
+  filter(species_city %in%  c("Boston", "Calgary", "Chicago", "Columbus", "Dallas", "Denver", "Houston", "Indianapolis", "Jacksonville")) %>% 
+  mutate(city = fct_reorder(term, Mean)) |>  
+  ggplot(aes(x = Mean, y = species_city)) +
+  geom_vline(xintercept = 0, linewidth = 0.25, color = "black") +
+  geom_point(aes(colour = term), position = position_dodge(width = 0.7)) +
+  geom_errorbarh(aes(xmin = `2.5%`, xmax = `97.5%`,     height = 0.5, colour = term), position = position_dodge(width = 0.7)) +
+  scale_colour_manual(values = c('Urban Land Cover' = "#c4281b", 'Tree Cover' = "#397d49", 'Shrubland' = "#dfc35a", 'Grassland' = "#88b053", 'Cropland' = "#e49635")) +
+  theme_bw() +
+  labs(x = "Posterior Mean",
+       y = "",
+       subtitle = "North America") +
+  theme(legend.background = element_blank(),
+        legend.box.background = element_rect(colour = "black"))+
+  guides(colour = guide_legend(reverse = T,
+                               title = "Land cover type")) +
+  scale_y_discrete(limits = rev)
+
+N_A_2 <- Cities %>%
+  filter(species_city %in%  c("Los Angeles", "Miami"," Montreal", "New York", "Ottawa", "Philadelphia", "Phoenix", "San Antonio", "San Diego")) %>% 
+  mutate(city = fct_reorder(term, Mean)) |>  
+  ggplot(aes(x = Mean, y = species_city)) +
+  geom_vline(xintercept = 0, linewidth = 0.25, color = "black") +
+  geom_point(aes(colour = term), position = position_dodge(width = 0.7)) +
+  geom_errorbarh(aes(xmin = `2.5%`, xmax = `97.5%`,     height = 0.5, colour = term), position = position_dodge(width = 0.7)) +
+  scale_colour_manual(values = c('Urban Land Cover' = "#c4281b", 'Tree Cover' = "#397d49", 'Shrubland' = "#dfc35a", 'Grassland' = "#88b053", 'Cropland' = "#e49635")) +
+  theme_bw() +
+  labs(x = "Posterior Mean",
+       y = "",
+       subtitle = "North America") +
+  theme(legend.background = element_blank(),
+        legend.box.background = element_rect(colour = "black"))+
+  guides(colour = guide_legend(reverse = T,
+                               title = "Land cover type")) +
+  scale_y_discrete(limits = rev)
+
+S_A <- Cities %>%
+  filter(species_city %in%  c("Quito", "Lima", "Santiago", "Buenos Aires")) %>% 
+  mutate(city = fct_reorder(term, Mean)) |>  
+  ggplot(aes(x = Mean, y = species_city)) +
+  geom_vline(xintercept = 0, linewidth = 0.25, color = "black") +
+  geom_point(aes(colour = term), position = position_dodge(width = 0.7)) +
+  geom_errorbarh(aes(xmin = `2.5%`, xmax = `97.5%`,     height = 0.5, colour = term), position = position_dodge(width = 0.7)) +
+  scale_colour_manual(values = c('Urban Land Cover' = "#c4281b", 'Tree Cover' = "#397d49", 'Shrubland' = "#dfc35a", 'Grassland' = "#88b053", 'Cropland' = "#e49635")) +
+  theme_bw() +
+  labs(x = "Posterior Mean",
+       y = "",
+       subtitle = "South America") +
+  theme(legend.background = element_blank(),
+        legend.box.background = element_rect(colour = "black"))+
+  guides(colour = guide_legend(reverse = T,
+                               title = "Land cover type")) +
+  scale_y_discrete(limits = rev) 
+
+Occ_plot <- Aus + Euro + S_A + N_A_1 + N_A_2 + guide_area() + plot_layout(guides = "collect") + plot_annotation(tag_levels = 'A')
+
+ggsave(Occ_plot, filename = "Figures/Figure_5.png", dpi = 800, units = "cm", height = 25, width = 20)
+```

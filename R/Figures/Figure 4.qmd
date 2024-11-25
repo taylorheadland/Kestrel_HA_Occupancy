@@ -1,0 +1,55 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(patchwork)
+
+dat <- read_csv("Results/Habitat Associations/Kestrel_Habitat_Associations.csv")
+
+Urban_Association_Positive <- dat |> 
+  filter(predictor == "ALAN_mean" & Association == "Positive") |> 
+  mutate(species = fct_reorder(species, estimate)) %>% 
+  arrange(desc(estimate)) %>%  
+  ggplot(aes(x=estimate, y=species)) +
+  geom_vline(xintercept = 0, size=0.25, color = "#AAAAAA") +
+  geom_hline(aes(yintercept = species), size=0.05, color = "#AAAAAA") + 
+  geom_point(aes(colour = Association)) +
+  scale_colour_manual(values = c('Positive' = "#0072B2"), limits = c("Positive"))+
+  geom_errorbarh(aes(xmin = conf.low, xmax = conf.high, height = 0.5, colour = Association))+
+  ylab("")+
+  xlab("")+
+  scale_x_continuous(breaks = scales::breaks_pretty()) +
+  theme_classic() +
+  theme(legend.background = element_blank(),
+        legend.box.background = element_rect(colour = "black"),
+        panel.border = element_rect(fill=NA, colour="black"))
+
+Urban_Association_Positive
+
+Urban_Association_Negative <- dat |> 
+  filter(predictor == "ALAN_mean" & Association == "Negative") |> 
+  mutate(species = fct_reorder(species, estimate)) %>% 
+  arrange(desc(estimate)) %>%  
+  ggplot(aes(x=estimate, y=species)) +
+  geom_vline(xintercept = 0, size=0.25, color = "#AAAAAA") +
+  geom_hline(aes(yintercept = species), size=0.05, color = "#AAAAAA") + 
+  geom_point(aes(colour = Association)) +
+  scale_colour_manual(values = c('Negative' = "#D55E00"), limits = c("Negative"))+
+  geom_errorbarh(aes(xmin = conf.low, xmax = conf.high, height = 0.5, colour = Association))+
+  ylab("")+
+  xlab("Association to urbanisation")+
+  scale_x_continuous(labels = scales::number_format(accuracy = 0.0001)) +
+  theme_classic() +
+  theme(legend.background = element_blank(),
+        legend.box.background = element_rect(colour = "black"),
+        panel.border = element_rect(fill=NA, colour="black"))
+
+
+Urban_Association_plot <- Urban_Association_Positive / Urban_Association_Negative
+
+ggsave(Urban_Association_plot, filename = "Figures/Urban_tolerance.png", dpi = 800, units = "cm")
+```

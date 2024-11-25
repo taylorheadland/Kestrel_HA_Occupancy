@@ -1,0 +1,351 @@
+predictor,importance,Total,importance_stnd,species,LC_type,LC_category
+ALAN_mean,11482.22997525929,219854.43723731805,5.222651004703169,American Kestrel,Dense,ALAN
+pland_LCCS1_c31_dense_herbaceous,5812.396758491947,219854.43723731805,2.6437477594404233,American Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c21_open_forest,5614.923268374405,219854.43723731805,2.553927652737558,American Kestrel,Dense,Forest
+pland_LCCS1_c22_sparse_forest,4955.254633786354,219854.43723731805,2.2538797470061933,American Kestrel,Dense,Forest
+pland_ASTWBD_c03_lake,3376.3975432692355,219854.43723731805,1.5357422782532433,American Kestrel,Open,Water Body
+pland_LCCS1_c14_deciduous_broadleaf,3181.875217277889,219854.43723731805,1.447264497938365,American Kestrel,Dense,Forest
+pland_LCCS2_c36_herbaceous_cropland,3121.2862890549104,219854.43723731805,1.4197058418637656,American Kestrel,Open,Cropland
+pland_ASTWBD_c01_ocean,2093.8881005994967,219854.43723731805,0.9523974712137766,American Kestrel,Open,Water Body
+pland_LCCS2_c25_forest_cropland_mosaic,1876.7927290544296,219854.43723731805,0.8536524223200272,American Kestrel,Dense,Mixed
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,1709.8031869800525,219854.43723731805,0.7776978297392447,American Kestrel,Dense,Forest
+pland_LCCS1_c32_sparse_herbaceous,1619.8752069205102,219854.43723731805,0.7367944114641471,American Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c11_evergreen_needleleaf,1578.178929026339,219854.43723731805,0.7178290094380952,American Kestrel,Dense,Forest
+pland_LCCS1_c12_evergreen_broadleaf,1362.088434713714,219854.43723731805,0.6195410253391571,American Kestrel,Dense,Forest
+pland_ASTWBD_c02_river,1322.7434133444758,219854.43723731805,0.6016450838864186,American Kestrel,Open,Water Body
+pland_LCCS1_c43_sparse_shrubland,1180.4860714648516,219854.43723731805,0.5369398436068845,American Kestrel,Open,Shrubland
+pland_LCCS3_c50_herbaceous_wetland,967.006885161319,219854.43723731805,0.43983960356347057,American Kestrel,Open,Wetland
+pland_LCCS1_c01_barren,787.2742453540963,219854.43723731805,0.35808885881356434,American Kestrel,Open,Barren
+pland_LCCS3_c27_woody_wetland,551.2917501096354,219854.43723731805,0.2507530696387779,American Kestrel,Dense,Wetland
+pland_LCCS1_c42_shrubland_grassland_mosaic,456.30851330999326,219854.43723731805,0.2075502860183072,American Kestrel,Open,Mixed
+pland_LCCS1_c41_dense_shrubland,359.4149268575266,219854.43723731805,0.1634785867294379,American Kestrel,Open,Shrubland
+pland_LCCS3_c51_tundra,248.51954091731164,219854.43723731805,0.11303821930555422,American Kestrel,Open,Tundra
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,245.22184205009708,219854.43723731805,0.11153827283703928,American Kestrel,Dense,Forest
+pland_LCCS1_c13_deciduous_needleleaf,55.55941849829048,219854.43723731805,0.02527100166657898,American Kestrel,Dense,Forest
+pland_LCCS1_c02_permanent_snow_ice,20.685882264197257,219854.43723731805,0.00940889914442265,American Kestrel,Open,Snow & Ice
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,7.768427020513321,219854.43723731805,0.00353344108862712,American Kestrel,Open,Mixed
+pland_LCCS1_c22_sparse_forest,1.6714016091086925,42.1551433602029,3.964881805351895,Banded Kestrel,Dense,Forest
+pland_LCCS1_c31_dense_herbaceous,1.4943157225453385,42.1551433602029,3.5448004761290086,Banded Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c12_evergreen_broadleaf,1.3495806946740136,42.1551433602029,3.201461523075029,Banded Kestrel,Dense,Forest
+pland_LCCS1_c14_deciduous_broadleaf,1.2674235792271291,42.1551433602029,3.0065692539517177,Banded Kestrel,Dense,Forest
+ALAN_mean,1.005503623359586,42.1551433602029,2.3852454130397867,Banded Kestrel,Dense,ALAN
+pland_LCCS1_c21_open_forest,0.930693806753598,42.1551433602029,2.207782331093272,Banded Kestrel,Dense,Forest
+pland_LCCS1_c42_shrubland_grassland_mosaic,0.8410416077984842,42.1551433602029,1.9951103015165648,Banded Kestrel,Open,Mixed
+pland_ASTWBD_c01_ocean,0.49024448874133086,42.1551433602029,1.1629529629453292,Banded Kestrel,Open,Water Body
+pland_LCCS1_c41_dense_shrubland,0.3606054392700073,42.1551433602029,0.855424535480151,Banded Kestrel,Open,Shrubland
+pland_ASTWBD_c02_river,0.20979212517124424,42.1551433602029,0.4976667339940805,Banded Kestrel,Open,Water Body
+pland_ASTWBD_c03_lake,0.1993627913621111,42.1551433602029,0.4729263749825652,Banded Kestrel,Open,Water Body
+pland_LCCS1_c43_sparse_shrubland,0.06470399331858065,42.1551433602029,0.15349015128641522,Banded Kestrel,Open,Shrubland
+pland_LCCS3_c50_herbaceous_wetland,0.0405692682398973,42.1551433602029,0.09623800325679176,Banded Kestrel,Open,Wetland
+pland_LCCS1_c32_sparse_herbaceous,0.03499034021777125,42.1551433602029,0.0830037272528987,Banded Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,0.01278020339875178,42.1551433602029,0.03031706781198399,Banded Kestrel,Dense,Forest
+pland_LCCS2_c36_herbaceous_cropland,0.01103074481003379,42.1551433602029,0.02616702003781468,Banded Kestrel,Open,Cropland
+pland_LCCS3_c27_woody_wetland,0.01053050371012635,42.1551433602029,0.02498035321608658,Banded Kestrel,Dense,Wetland
+pland_LCCS1_c01_barren,0,42.1551433602029,0,Banded Kestrel,Open,Barren
+pland_LCCS1_c02_permanent_snow_ice,0,42.1551433602029,0,Banded Kestrel,Open,Snow & Ice
+pland_LCCS1_c11_evergreen_needleleaf,0,42.1551433602029,0,Banded Kestrel,Dense,Forest
+pland_LCCS1_c13_deciduous_needleleaf,0,42.1551433602029,0,Banded Kestrel,Dense,Forest
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,0,42.1551433602029,0,Banded Kestrel,Dense,Forest
+pland_LCCS2_c25_forest_cropland_mosaic,0,42.1551433602029,0,Banded Kestrel,Dense,Mixed
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,0,42.1551433602029,0,Banded Kestrel,Open,Mixed
+pland_LCCS3_c51_tundra,0,42.1551433602029,0,Banded Kestrel,Open,Tundra
+ALAN_mean,16.256536951282445,211.9235997038351,7.670942251830888,Dickinsons Kestrel,Dense,ALAN
+pland_LCCS1_c22_sparse_forest,7.568305950896012,211.9235997038351,3.5712426371922614,Dickinsons Kestrel,Dense,Forest
+pland_LCCS1_c31_dense_herbaceous,6.344672690423501,211.9235997038351,2.9938490565893705,Dickinsons Kestrel,Open,Herbaceous Plant Cover
+pland_ASTWBD_c02_river,4.078367119994253,211.9235997038351,1.924451606944108,Dickinsons Kestrel,Open,Water Body
+pland_LCCS3_c50_herbaceous_wetland,2.780605461429816,211.9235997038351,1.3120791951985216,Dickinsons Kestrel,Open,Wetland
+pland_ASTWBD_c01_ocean,2.54806811026427,211.9235997038351,1.2023522221334553,Dickinsons Kestrel,Open,Water Body
+pland_LCCS1_c21_open_forest,2.0985955370612164,211.9235997038351,0.9902604240367852,Dickinsons Kestrel,Dense,Forest
+pland_ASTWBD_c03_lake,2.05988528951155,211.9235997038351,0.9719942905793671,Dickinsons Kestrel,Open,Water Body
+pland_LCCS2_c36_herbaceous_cropland,1.4786504318509597,211.9235997038351,0.697728065169422,Dickinsons Kestrel,Open,Cropland
+pland_LCCS1_c12_evergreen_broadleaf,1.142835485314517,211.9235997038351,0.5392676827458758,Dickinsons Kestrel,Dense,Forest
+pland_LCCS1_c14_deciduous_broadleaf,0.956342976255392,211.9235997038351,0.4512678048088504,Dickinsons Kestrel,Dense,Forest
+pland_LCCS1_c41_dense_shrubland,0.851920947861406,211.9235997038351,0.401994373940407,Dickinsons Kestrel,Open,Shrubland
+pland_LCCS1_c42_shrubland_grassland_mosaic,0.7890024312849895,211.9235997038351,0.37230512901235474,Dickinsons Kestrel,Open,Mixed
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,0.5955366171576484,211.9235997038351,0.281014770412505,Dickinsons Kestrel,Dense,Forest
+pland_LCCS3_c27_woody_wetland,0.344770154194779,211.9235997038351,0.162686059823728,Dickinsons Kestrel,Dense,Wetland
+pland_LCCS1_c32_sparse_herbaceous,0.22507865071860728,211.9235997038351,0.10620744977584208,Dickinsons Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS2_c25_forest_cropland_mosaic,0.1044130527141677,211.9235997038351,0.04926919553088272,Dickinsons Kestrel,Dense,Mixed
+pland_LCCS1_c01_barren,0.03523097000014907,211.9235997038351,0.01662437314644741,Dickinsons Kestrel,Open,Barren
+pland_LCCS1_c43_sparse_shrubland,0.03270567887158367,211.9235997038351,0.01543276865686035,Dickinsons Kestrel,Open,Shrubland
+pland_LCCS1_c11_evergreen_needleleaf,0.00242874458874458,211.9235997038351,0.00114604725105593,Dickinsons Kestrel,Dense,Forest
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,1.8115942028985895e-4,211.9235997038351,8.548336312851929e-5,Dickinsons Kestrel,Open,Mixed
+pland_LCCS1_c02_permanent_snow_ice,0,211.9235997038351,0,Dickinsons Kestrel,Open,Snow & Ice
+pland_LCCS1_c13_deciduous_needleleaf,0,211.9235997038351,0,Dickinsons Kestrel,Dense,Forest
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,0,211.9235997038351,0,Dickinsons Kestrel,Dense,Forest
+pland_LCCS3_c51_tundra,0,211.9235997038351,0,Dickinsons Kestrel,Open,Tundra
+ALAN_mean,12796.67378617808,256443.21848395368,4.990061293813781,Eurasian Kestrel,Dense,ALAN
+pland_LCCS1_c22_sparse_forest,5956.033309477443,256443.21848395368,2.322554421477177,Eurasian Kestrel,Dense,Forest
+pland_LCCS1_c31_dense_herbaceous,5937.218582796768,256443.21848395368,2.3152176212327,Eurasian Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS2_c36_herbaceous_cropland,4718.793825971911,256443.21848395368,1.8400930443271513,Eurasian Kestrel,Open,Cropland
+pland_LCCS1_c21_open_forest,3985.1891578883105,256443.21848395368,1.554023998547528,Eurasian Kestrel,Dense,Forest
+pland_ASTWBD_c01_ocean,3205.848068191267,256443.21848395368,1.2501200410537918,Eurasian Kestrel,Open,Water Body
+pland_LCCS1_c12_evergreen_broadleaf,3196.0777314866255,256443.21848395368,1.2463100995149194,Eurasian Kestrel,Dense,Forest
+pland_ASTWBD_c03_lake,2921.6790561377643,256443.21848395368,1.139308371424367,Eurasian Kestrel,Open,Water Body
+pland_LCCS2_c25_forest_cropland_mosaic,2647.066194037657,256443.21848395368,1.0322231212377686,Eurasian Kestrel,Dense,Mixed
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,2163.2798934809575,256443.21848395368,0.8435707156811868,Eurasian Kestrel,Dense,Forest
+pland_LCCS1_c43_sparse_shrubland,1699.928820233153,256443.21848395368,0.6628870243802223,Eurasian Kestrel,Open,Shrubland
+pland_LCCS1_c32_sparse_herbaceous,1598.836976604078,256443.21848395368,0.6234662729847626,Eurasian Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c11_evergreen_needleleaf,1496.217994343116,256443.21848395368,0.5834500140766008,Eurasian Kestrel,Dense,Forest
+pland_LCCS1_c14_deciduous_broadleaf,1411.3755797224385,256443.21848395368,0.5503657254289029,Eurasian Kestrel,Dense,Forest
+pland_LCCS1_c01_barren,1359.4593984952276,256443.21848395368,0.5301210172497863,Eurasian Kestrel,Open,Barren
+pland_ASTWBD_c02_river,1096.9425361992774,256443.21848395368,0.4277526006280083,Eurasian Kestrel,Open,Water Body
+pland_LCCS3_c50_herbaceous_wetland,917.2515204562078,256443.21848395368,0.35768211219576573,Eurasian Kestrel,Open,Wetland
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,645.1906639458423,256443.21848395368,0.2515920162600102,Eurasian Kestrel,Dense,Forest
+pland_LCCS3_c27_woody_wetland,420.15745121606807,256443.21848395368,0.1638403439560475,Eurasian Kestrel,Dense,Wetland
+pland_LCCS1_c42_shrubland_grassland_mosaic,375.3192611508152,256443.21848395368,0.14635569751839625,Eurasian Kestrel,Open,Mixed
+pland_LCCS3_c51_tundra,136.9084432533437,256443.21848395368,0.05338742980326088,Eurasian Kestrel,Open,Tundra
+pland_LCCS1_c41_dense_shrubland,82.35440454815163,256443.21848395368,0.03211408944054598,Eurasian Kestrel,Open,Shrubland
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,46.37490073550524,256443.21848395368,0.0180838865654804,Eurasian Kestrel,Open,Mixed
+pland_LCCS1_c02_permanent_snow_ice,30.29657238522717,256443.21848395368,0.01181414449730239,Eurasian Kestrel,Open,Snow & Ice
+pland_LCCS1_c13_deciduous_needleleaf,4.239249268664821,256443.21848395368,0.00165309470600412,Eurasian Kestrel,Dense,Forest
+pland_LCCS2_c36_herbaceous_cropland,5.631544207118629,106.32889225608676,5.296344283880428,Fox Kestrel,Open,Cropland
+ALAN_mean,5.095693866473288,106.32889225608676,4.792388746231471,Fox Kestrel,Dense,ALAN
+pland_LCCS1_c31_dense_herbaceous,4.27927837576611,106.32889225608676,4.02456781498271,Fox Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c22_sparse_forest,1.814893006609907,106.32889225608676,1.7068672193432115,Fox Kestrel,Dense,Forest
+pland_LCCS1_c32_sparse_herbaceous,1.7580650047030302,106.32889225608676,1.6534217251777967,Fox Kestrel,Open,Herbaceous Plant Cover
+pland_ASTWBD_c03_lake,0.8089472033115841,106.32889225608676,0.7607971701268958,Fox Kestrel,Open,Water Body
+pland_ASTWBD_c02_river,0.8041866419379079,106.32889225608676,0.7563199661678716,Fox Kestrel,Open,Water Body
+pland_LCCS2_c25_forest_cropland_mosaic,0.46759807667715486,106.32889225608676,0.4397657746221724,Fox Kestrel,Dense,Mixed
+pland_ASTWBD_c01_ocean,0.3591490036907845,106.32889225608676,0.3377717909689078,Fox Kestrel,Open,Water Body
+pland_LCCS3_c50_herbaceous_wetland,0.33551827068011814,106.32889225608676,0.3155476028773464,Fox Kestrel,Open,Wetland
+pland_LCCS1_c43_sparse_shrubland,0.17211566712636128,106.32889225608676,0.16187102439836487,Fox Kestrel,Open,Shrubland
+pland_LCCS1_c01_barren,0.14233186708007944,106.32889225608676,0.13386001119740973,Fox Kestrel,Open,Barren
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,0.12206137566203808,106.32889225608676,0.11479605690620812,Fox Kestrel,Open,Mixed
+pland_LCCS1_c12_evergreen_broadleaf,0.11554058232858272,106.32889225608676,0.1086633932481025,Fox Kestrel,Dense,Forest
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,0.07008770355575415,106.32889225608676,0.0659159538565982,Fox Kestrel,Dense,Forest
+pland_LCCS1_c14_deciduous_broadleaf,0.06248375297236789,106.32889225608676,0.05876460447070164,Fox Kestrel,Dense,Forest
+pland_LCCS1_c21_open_forest,0.05402695508395424,106.32889225608676,0.05081117082818239,Fox Kestrel,Dense,Forest
+pland_LCCS3_c27_woody_wetland,0.01911457414351055,106.32889225608676,0.0179768393499993,Fox Kestrel,Dense,Wetland
+pland_LCCS1_c41_dense_shrubland,0.00330576441985797,106.32889225608676,0.00310899920963743,Fox Kestrel,Open,Shrubland
+pland_LCCS1_c42_shrubland_grassland_mosaic,0.00328345996493278,106.32889225608676,0.00308802235710757,Fox Kestrel,Open,Mixed
+pland_LCCS1_c02_permanent_snow_ice,0,106.32889225608676,0,Fox Kestrel,Open,Snow & Ice
+pland_LCCS1_c11_evergreen_needleleaf,0,106.32889225608676,0,Fox Kestrel,Dense,Forest
+pland_LCCS1_c13_deciduous_needleleaf,0,106.32889225608676,0,Fox Kestrel,Dense,Forest
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,0,106.32889225608676,0,Fox Kestrel,Dense,Forest
+pland_LCCS3_c51_tundra,0,106.32889225608676,0,Fox Kestrel,Open,Tundra
+ALAN_mean,31.90986908330724,414.344499875313,7.701289408429399,Greater Kestrel,Dense,ALAN
+pland_LCCS1_c31_dense_herbaceous,24.95957046778586,414.344499875313,6.023869141571046,Greater Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c22_sparse_forest,22.727913312544107,414.344499875313,5.485269701753861,Greater Kestrel,Dense,Forest
+pland_LCCS1_c01_barren,12.427113117751215,414.344499875313,2.9992224155240046,Greater Kestrel,Open,Barren
+pland_LCCS1_c43_sparse_shrubland,11.499051307109688,414.344499875313,2.7752392780814157,Greater Kestrel,Open,Shrubland
+pland_LCCS1_c42_shrubland_grassland_mosaic,9.836197214975522,414.344499875313,2.3739176501523467,Greater Kestrel,Open,Mixed
+pland_LCCS1_c32_sparse_herbaceous,3.7937973057672143,414.344499875313,0.9156142550242292,Greater Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS2_c36_herbaceous_cropland,3.501075536181833,414.344499875313,0.8449673006967384,Greater Kestrel,Open,Cropland
+pland_ASTWBD_c03_lake,2.9657894886759437,414.344499875313,0.7157786550970091,Greater Kestrel,Open,Water Body
+pland_LCCS1_c12_evergreen_broadleaf,1.9294342895962588,414.344499875313,0.46565944284933813,Greater Kestrel,Dense,Forest
+pland_ASTWBD_c02_river,1.7433179786356934,414.344499875313,0.4207411897974519,Greater Kestrel,Open,Water Body
+pland_LCCS1_c21_open_forest,1.6181963725699835,414.344499875313,0.3905437077255619,Greater Kestrel,Dense,Forest
+pland_LCCS1_c41_dense_shrubland,1.5786725327874904,414.344499875313,0.3810048240685116,Greater Kestrel,Open,Shrubland
+pland_ASTWBD_c01_ocean,1.2299327216330147,414.344499875313,0.2968381918918034,Greater Kestrel,Open,Water Body
+pland_LCCS3_c50_herbaceous_wetland,1.082398207579355,414.344499875313,0.2612314650985054,Greater Kestrel,Open,Wetland
+pland_LCCS3_c27_woody_wetland,0.21693295729388637,414.344499875313,0.05235569854533296,Greater Kestrel,Dense,Wetland
+pland_LCCS2_c25_forest_cropland_mosaic,0.20891246959461532,414.344499875313,0.05041999342515287,Greater Kestrel,Dense,Mixed
+pland_LCCS1_c14_deciduous_broadleaf,0.0936315271290018,414.344499875313,0.02259750694341978,Greater Kestrel,Dense,Forest
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,0.06752986125148464,414.344499875313,0.01629799871165325,Greater Kestrel,Dense,Forest
+pland_LCCS3_c51_tundra,0.06283320439156437,414.344499875313,0.01516448375940129,Greater Kestrel,Open,Tundra
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,0.00535523889578247,414.344499875313,0.00129246047609996,Greater Kestrel,Open,Mixed
+pland_LCCS1_c02_permanent_snow_ice,0,414.344499875313,0,Greater Kestrel,Open,Snow & Ice
+pland_LCCS1_c11_evergreen_needleleaf,0,414.344499875313,0,Greater Kestrel,Dense,Forest
+pland_LCCS1_c13_deciduous_needleleaf,0,414.344499875313,0,Greater Kestrel,Dense,Forest
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,0,414.344499875313,0,Greater Kestrel,Dense,Forest
+ALAN_mean,58.55308813304667,1296.560154956109,4.516033283085797,Grey Kestrel,Dense,ALAN
+pland_LCCS2_c36_herbaceous_cropland,37.79254021918707,1296.560154956109,2.9148312228109785,Grey Kestrel,Open,Cropland
+pland_LCCS1_c22_sparse_forest,28.58502429253974,1296.560154956109,2.204681686636236,Grey Kestrel,Dense,Forest
+pland_LCCS1_c31_dense_herbaceous,27.833691884160547,1296.560154956109,2.1467335532228176,Grey Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c21_open_forest,17.26108005455204,1296.560154956109,1.3312980495792237,Grey Kestrel,Dense,Forest
+pland_LCCS2_c25_forest_cropland_mosaic,16.311203424402905,1296.560154956109,1.2580367645923125,Grey Kestrel,Dense,Mixed
+pland_ASTWBD_c03_lake,16.26951691458094,1296.560154956109,1.254821602560484,Grey Kestrel,Open,Water Body
+pland_LCCS1_c32_sparse_herbaceous,15.654756551910223,1296.560154956109,1.207406882902411,Grey Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c12_evergreen_broadleaf,15.075165306436205,1296.560154956109,1.162704657305046,Grey Kestrel,Dense,Forest
+pland_LCCS3_c50_herbaceous_wetland,10.802498744497434,1296.560154956109,0.8331660280631653,Grey Kestrel,Open,Wetland
+pland_ASTWBD_c02_river,7.673307345170676,1296.560154956109,0.5918203884208081,Grey Kestrel,Open,Water Body
+pland_ASTWBD_c01_ocean,6.139573401896785,1296.560154956109,0.4735278481625575,Grey Kestrel,Open,Water Body
+pland_LCCS3_c27_woody_wetland,5.569219721529985,1296.560154956109,0.4295380897092672,Grey Kestrel,Dense,Wetland
+pland_LCCS1_c01_barren,3.752260823168225,1296.560154956109,0.28940121357464094,Grey Kestrel,Open,Barren
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,2.829846409520468,1296.560154956109,0.21825801130039071,Grey Kestrel,Open,Mixed
+pland_LCCS1_c43_sparse_shrubland,1.083804474789708,1296.560154956109,0.08359075902856175,Grey Kestrel,Open,Shrubland
+pland_LCCS1_c14_deciduous_broadleaf,1.037219066973604,1296.560154956109,0.07999775891684069,Grey Kestrel,Dense,Forest
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,0.5593965935468034,1296.560154956109,0.04314466948629468,Grey Kestrel,Dense,Forest
+pland_LCCS1_c42_shrubland_grassland_mosaic,0.4760167448282728,1296.560154956109,0.03671381871552168,Grey Kestrel,Open,Mixed
+pland_LCCS1_c41_dense_shrubland,0.2419885370800307,1296.560154956109,0.01866388814703491,Grey Kestrel,Open,Shrubland
+pland_LCCS1_c11_evergreen_needleleaf,0.01680878769317353,1296.560154956109,0.0012964140251358,Grey Kestrel,Dense,Forest
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,8.538955690989951e-4,1296.560154956109,6.585853852094514e-5,Grey Kestrel,Dense,Forest
+pland_LCCS1_c02_permanent_snow_ice,0,1296.560154956109,0,Grey Kestrel,Open,Snow & Ice
+pland_LCCS1_c13_deciduous_needleleaf,0,1296.560154956109,0,Grey Kestrel,Dense,Forest
+pland_LCCS3_c51_tundra,0,1296.560154956109,0,Grey Kestrel,Open,Tundra
+ALAN_mean,657.5836072951392,11761.550974125808,5.590959974086369,Lesser Kestrel,Dense,ALAN
+pland_LCCS2_c36_herbaceous_cropland,303.219378357117,11761.550974125808,2.5780560661103986,Lesser Kestrel,Open,Cropland
+pland_LCCS1_c31_dense_herbaceous,276.840511449394,11761.550974125808,2.353775552717617,Lesser Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c22_sparse_forest,212.47203459279555,11761.550974125808,1.8064967372093357,Lesser Kestrel,Dense,Forest
+pland_LCCS1_c43_sparse_shrubland,134.70128552929668,11761.550974125808,1.1452680503245325,Lesser Kestrel,Open,Shrubland
+pland_ASTWBD_c03_lake,129.31952926358977,11761.550974125808,1.0995108514861631,Lesser Kestrel,Open,Water Body
+pland_LCCS1_c32_sparse_herbaceous,104.58616266951212,11761.550974125808,0.8892208425537658,Lesser Kestrel,Open,Herbaceous Plant Cover
+pland_ASTWBD_c01_ocean,104.37313450065064,11761.550974125808,0.8874096174072681,Lesser Kestrel,Open,Water Body
+pland_LCCS1_c01_barren,97.83857149131008,11761.550974125808,0.8318509328110281,Lesser Kestrel,Open,Barren
+pland_LCCS1_c21_open_forest,92.0340749966671,11761.550974125808,0.7824994781651887,Lesser Kestrel,Dense,Forest
+pland_LCCS1_c14_deciduous_broadleaf,58.498429096477125,11761.550974125808,0.4973700256468523,Lesser Kestrel,Dense,Forest
+pland_LCCS1_c42_shrubland_grassland_mosaic,58.384559188575906,11761.550974125808,0.49640187180258694,Lesser Kestrel,Open,Mixed
+pland_LCCS2_c25_forest_cropland_mosaic,57.92805294402041,11761.550974125808,0.49252052787473455,Lesser Kestrel,Dense,Mixed
+pland_ASTWBD_c02_river,47.09551596018978,11761.550974125808,0.4004192649744496,Lesser Kestrel,Open,Water Body
+pland_LCCS1_c11_evergreen_needleleaf,38.68661321121946,11761.550974125808,0.32892441903560166,Lesser Kestrel,Dense,Forest
+pland_LCCS3_c50_herbaceous_wetland,35.894648425078394,11761.550974125808,0.305186352582605,Lesser Kestrel,Open,Wetland
+pland_LCCS1_c12_evergreen_broadleaf,25.32234288381164,11761.550974125808,0.21529765028029188,Lesser Kestrel,Dense,Forest
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,17.232285134634974,11761.550974125808,0.14651371381669148,Lesser Kestrel,Dense,Forest
+pland_LCCS1_c41_dense_shrubland,13.149143755682337,11761.550974125808,0.11179770240004136,Lesser Kestrel,Open,Shrubland
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,4.740355313764631,11761.550974125808,0.04030382833176442,Lesser Kestrel,Dense,Forest
+pland_LCCS3_c27_woody_wetland,4.035991520200102,11761.550974125808,0.03431513011403738,Lesser Kestrel,Dense,Wetland
+pland_LCCS3_c51_tundra,3.5891641584255294,11761.550974125808,0.03051607875799134,Lesser Kestrel,Open,Tundra
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,2.786671096228708,11761.550974125808,0.02369305801895596,Lesser Kestrel,Open,Mixed
+pland_LCCS1_c02_permanent_snow_ice,0.5079169647650833,11761.550974125808,0.00431845226775319,Lesser Kestrel,Open,Snow & Ice
+pland_LCCS1_c13_deciduous_needleleaf,0.1738253811014032,11761.550974125808,0.00147791206690172,Lesser Kestrel,Dense,Forest
+pland_LCCS1_c31_dense_herbaceous,25.76414669541634,683.4291666469627,3.769834234880593,Malagasy Kestrel,Open,Herbaceous Plant Cover
+ALAN_mean,24.820512073461273,683.4291666469627,3.6317607273385137,Malagasy Kestrel,Dense,ALAN
+pland_LCCS1_c12_evergreen_broadleaf,18.615807491982245,683.4291666469627,2.7238825031883027,Malagasy Kestrel,Dense,Forest
+pland_LCCS1_c21_open_forest,13.535321637655874,683.4291666469627,1.980501023107166,Malagasy Kestrel,Dense,Forest
+pland_LCCS1_c22_sparse_forest,12.89340475846948,683.4291666469627,1.886575140146132,Malagasy Kestrel,Dense,Forest
+pland_ASTWBD_c01_ocean,8.943358431542066,683.4291666469627,1.3086006374910708,Malagasy Kestrel,Open,Water Body
+pland_ASTWBD_c03_lake,7.942235600438772,683.4291666469627,1.1621154009866064,Malagasy Kestrel,Open,Water Body
+pland_LCCS1_c14_deciduous_broadleaf,7.739432279897975,683.4291666469627,1.132441027922344,Malagasy Kestrel,Dense,Forest
+pland_LCCS1_c42_shrubland_grassland_mosaic,6.860824529142063,683.4291666469627,1.0038823134813826,Malagasy Kestrel,Open,Mixed
+pland_LCCS2_c36_herbaceous_cropland,4.954213210129434,683.4291666469627,0.7249051477325403,Malagasy Kestrel,Open,Cropland
+pland_ASTWBD_c02_river,3.7869794467618902,683.4291666469627,0.5541144030099788,Malagasy Kestrel,Open,Water Body
+pland_LCCS1_c41_dense_shrubland,2.815283309477586,683.4291666469627,0.4119349080885613,Malagasy Kestrel,Open,Shrubland
+pland_LCCS1_c43_sparse_shrubland,2.776982758709475,683.4291666469627,0.40633073539045694,Malagasy Kestrel,Open,Shrubland
+pland_LCCS1_c32_sparse_herbaceous,2.3330850211341887,683.4291666469627,0.3413791999221749,Malagasy Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS3_c50_herbaceous_wetland,1.031272528852384,683.4291666469627,0.150896768704211,Malagasy Kestrel,Open,Wetland
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,0.600281350724059,683.4291666469627,0.08783373318249743,Malagasy Kestrel,Dense,Forest
+pland_LCCS3_c27_woody_wetland,0.3135199088892547,683.4291666469627,0.04587452865487798,Malagasy Kestrel,Dense,Wetland
+pland_LCCS2_c25_forest_cropland_mosaic,0.00900937787920531,683.4291666469627,0.00131826066531621,Malagasy Kestrel,Dense,Mixed
+pland_LCCS1_c01_barren,0.00539984563840436,683.4291666469627,7.901105047794589e-4,Malagasy Kestrel,Open,Barren
+pland_LCCS1_c11_evergreen_needleleaf,0.00136287737370557,683.4291666469627,1.9941750223978816e-4,Malagasy Kestrel,Dense,Forest
+pland_LCCS1_c02_permanent_snow_ice,0,683.4291666469627,0,Malagasy Kestrel,Open,Snow & Ice
+pland_LCCS1_c13_deciduous_needleleaf,0,683.4291666469627,0,Malagasy Kestrel,Dense,Forest
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,0,683.4291666469627,0,Malagasy Kestrel,Dense,Forest
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,0,683.4291666469627,0,Malagasy Kestrel,Open,Mixed
+pland_LCCS3_c51_tundra,0,683.4291666469627,0,Malagasy Kestrel,Open,Tundra
+pland_LCCS2_c36_herbaceous_cropland,1.3394758334155925,20.719743105133453,6.464731858010964,Mauritius Kestrel,Open,Cropland
+pland_LCCS1_c31_dense_herbaceous,1.118634393953308,20.719743105133453,5.398881580130011,Mauritius Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c22_sparse_forest,0.999557144332113,20.719743105133453,4.824177304034557,Mauritius Kestrel,Dense,Forest
+ALAN_mean,0.7763333628930184,20.719743105133453,3.746829094134264,Mauritius Kestrel,Dense,ALAN
+pland_LCCS2_c25_forest_cropland_mosaic,0.6988517449141024,20.719743105133453,3.3728784250271775,Mauritius Kestrel,Dense,Mixed
+pland_LCCS1_c12_evergreen_broadleaf,0.4400206118532573,20.719743105133453,2.1236779318187553,Mauritius Kestrel,Dense,Forest
+pland_ASTWBD_c01_ocean,0.021629724126901,20.719743105133453,0.1043918547500818,Mauritius Kestrel,Open,Water Body
+pland_LCCS1_c21_open_forest,0.01963952318213187,20.719743105133453,0.09478651874436636,Mauritius Kestrel,Dense,Forest
+pland_ASTWBD_c03_lake,0.0166876131242264,20.719743105133453,0.08053967194261176,Mauritius Kestrel,Open,Water Body
+pland_LCCS1_c14_deciduous_broadleaf,0.01190640316205533,20.719743105133453,0.05746404818651175,Mauritius Kestrel,Dense,Forest
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,0.00889650349650349,20.719743105133453,0.04293732529096522,Mauritius Kestrel,Dense,Forest
+pland_LCCS1_c32_sparse_herbaceous,0.00617849752586595,20.719743105133453,0.02981937321575761,Mauritius Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c01_barren,0,20.719743105133453,0,Mauritius Kestrel,Open,Barren
+pland_LCCS1_c02_permanent_snow_ice,0,20.719743105133453,0,Mauritius Kestrel,Open,Snow & Ice
+pland_LCCS1_c11_evergreen_needleleaf,0,20.719743105133453,0,Mauritius Kestrel,Dense,Forest
+pland_LCCS1_c13_deciduous_needleleaf,0,20.719743105133453,0,Mauritius Kestrel,Dense,Forest
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,0,20.719743105133453,0,Mauritius Kestrel,Dense,Forest
+pland_LCCS1_c41_dense_shrubland,0,20.719743105133453,0,Mauritius Kestrel,Open,Shrubland
+pland_LCCS1_c42_shrubland_grassland_mosaic,0,20.719743105133453,0,Mauritius Kestrel,Open,Mixed
+pland_LCCS1_c43_sparse_shrubland,0,20.719743105133453,0,Mauritius Kestrel,Open,Shrubland
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,0,20.719743105133453,0,Mauritius Kestrel,Open,Mixed
+pland_LCCS3_c27_woody_wetland,0,20.719743105133453,0,Mauritius Kestrel,Dense,Wetland
+pland_LCCS3_c50_herbaceous_wetland,0,20.719743105133453,0,Mauritius Kestrel,Open,Wetland
+pland_LCCS3_c51_tundra,0,20.719743105133453,0,Mauritius Kestrel,Open,Tundra
+pland_ASTWBD_c02_river,0,20.719743105133453,0,Mauritius Kestrel,Open,Water Body
+ALAN_mean,1339.0441650306664,26773.685522327654,5.001344188920062,Nankeen Kestrel,Dense,ALAN
+pland_LCCS1_c31_dense_herbaceous,1083.1854722949151,26773.685522327654,4.045709252062451,Nankeen Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c12_evergreen_broadleaf,773.8897604302474,26773.685522327654,2.8904864807830415,Nankeen Kestrel,Dense,Forest
+pland_LCCS1_c22_sparse_forest,713.8238375589866,26773.685522327654,2.6661396204258097,Nankeen Kestrel,Dense,Forest
+pland_LCCS1_c21_open_forest,438.6093168679412,26773.685522327654,1.6382104604245358,Nankeen Kestrel,Dense,Forest
+pland_LCCS1_c43_sparse_shrubland,430.296294231407,26773.685522327654,1.6071612325190177,Nankeen Kestrel,Open,Shrubland
+pland_ASTWBD_c01_ocean,388.1914650532692,26773.685522327654,1.4498992480117865,Nankeen Kestrel,Open,Water Body
+pland_LCCS2_c36_herbaceous_cropland,351.87119009763114,26773.685522327654,1.3142426350088845,Nankeen Kestrel,Open,Cropland
+pland_ASTWBD_c03_lake,316.1428689705087,26773.685522327654,1.18079697584729,Nankeen Kestrel,Open,Water Body
+pland_LCCS1_c42_shrubland_grassland_mosaic,270.7266697579203,26773.685522327654,1.0111669890652537,Nankeen Kestrel,Open,Mixed
+pland_LCCS1_c32_sparse_herbaceous,147.24021450902632,26773.685522327654,0.5499437661887705,Nankeen Kestrel,Open,Herbaceous Plant Cover
+pland_ASTWBD_c02_river,133.30192178021062,26773.685522327654,0.49788409469829903,Nankeen Kestrel,Open,Water Body
+pland_LCCS3_c50_herbaceous_wetland,130.24360497829,26773.685522327654,0.48646124893666426,Nankeen Kestrel,Open,Wetland
+pland_LCCS1_c41_dense_shrubland,118.787051222657,26773.685522327654,0.443670898889119,Nankeen Kestrel,Open,Shrubland
+pland_LCCS1_c11_evergreen_needleleaf,113.69019762659175,26773.685522327654,0.424634096534005,Nankeen Kestrel,Dense,Forest
+pland_LCCS3_c27_woody_wetland,100.6012029575656,26773.685522327654,0.3757465623239288,Nankeen Kestrel,Dense,Wetland
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,89.35947966006009,26773.685522327654,0.33375860632089527,Nankeen Kestrel,Dense,Forest
+pland_LCCS1_c01_barren,65.41752193297718,26773.685522327654,0.24433513973420976,Nankeen Kestrel,Open,Barren
+pland_LCCS2_c25_forest_cropland_mosaic,30.9942306925533,26773.685522327654,0.11576378107043184,Nankeen Kestrel,Dense,Mixed
+pland_LCCS1_c14_deciduous_broadleaf,25.15103584404429,26773.685522327654,0.09393938620467408,Nankeen Kestrel,Dense,Forest
+pland_LCCS3_c51_tundra,0.4593665523506213,26773.685522327654,0.00171573895557836,Nankeen Kestrel,Open,Tundra
+pland_LCCS1_c02_permanent_snow_ice,0.07708362476156654,26773.685522327654,2.8790815779651774e-4,Nankeen Kestrel,Open,Snow & Ice
+pland_LCCS1_c13_deciduous_needleleaf,0,26773.685522327654,0,Nankeen Kestrel,Dense,Forest
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,0,26773.685522327654,0,Nankeen Kestrel,Dense,Forest
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,0,26773.685522327654,0,Nankeen Kestrel,Open,Mixed
+pland_LCCS1_c31_dense_herbaceous,82.52522506983912,1881.714532317273,4.3856399922793745,Rock Kestrel,Open,Herbaceous Plant Cover
+ALAN_mean,73.61511934477072,1881.714532317273,3.9121300325037063,Rock Kestrel,Dense,ALAN
+pland_LCCS1_c22_sparse_forest,60.889631565080244,1881.714532317273,3.235859133749504,Rock Kestrel,Dense,Forest
+pland_LCCS2_c36_herbaceous_cropland,55.26746605483694,1881.714532317273,2.9370802587561866,Rock Kestrel,Open,Cropland
+pland_LCCS1_c43_sparse_shrubland,50.38939436637721,1881.714532317273,2.6778447793738525,Rock Kestrel,Open,Shrubland
+pland_ASTWBD_c01_ocean,48.09099675418369,1881.714532317273,2.555700980581848,Rock Kestrel,Open,Water Body
+pland_LCCS1_c42_shrubland_grassland_mosaic,47.78835899088678,1881.714532317273,2.539617894752446,Rock Kestrel,Open,Mixed
+pland_LCCS1_c01_barren,29.374338594211455,1881.714532317273,1.5610411722780215,Rock Kestrel,Open,Barren
+pland_ASTWBD_c02_river,22.180712601005233,1881.714532317273,1.1787501355846135,Rock Kestrel,Open,Water Body
+pland_LCCS1_c41_dense_shrubland,20.605691003814016,1881.714532317273,1.0950487255066657,Rock Kestrel,Open,Shrubland
+pland_ASTWBD_c03_lake,16.915191921345606,1881.714532317273,0.898924445277843,Rock Kestrel,Open,Water Body
+pland_LCCS1_c21_open_forest,16.107300365186735,1881.714532317273,0.855990645156526,Rock Kestrel,Dense,Forest
+pland_LCCS1_c12_evergreen_broadleaf,15.928003755795904,1881.714532317273,0.8464622811931551,Rock Kestrel,Dense,Forest
+pland_LCCS1_c32_sparse_herbaceous,12.854946409038256,1881.714532317273,0.6831507217626569,Rock Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS2_c25_forest_cropland_mosaic,8.146153778320253,1881.714532317273,0.4329112433589231,Rock Kestrel,Dense,Mixed
+pland_LCCS1_c14_deciduous_broadleaf,6.246437334261781,1881.714532317273,0.33195456733649636,Rock Kestrel,Dense,Forest
+pland_LCCS3_c50_herbaceous_wetland,5.9398803462937195,1881.714532317273,0.31566320205748427,Rock Kestrel,Open,Wetland
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,3.1990673426277665,1881.714532317273,0.17000811162829327,Rock Kestrel,Dense,Forest
+pland_LCCS1_c11_evergreen_needleleaf,2.770605630402153,1881.714532317273,0.1472383606981149,Rock Kestrel,Dense,Forest
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,1.4883622633888516,1881.714532317273,0.07909607104729002,Rock Kestrel,Dense,Forest
+pland_LCCS3_c27_woody_wetland,0.805870845736621,1881.714532317273,0.04282641345944307,Rock Kestrel,Dense,Wetland
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,0.5075914361646903,1881.714532317273,0.02697494372536981,Rock Kestrel,Open,Mixed
+pland_LCCS3_c51_tundra,0.06745580051215358,1881.714532317273,0.00358480520576539,Rock Kestrel,Open,Tundra
+pland_LCCS1_c02_permanent_snow_ice,0,1881.714532317273,0,Rock Kestrel,Open,Snow & Ice
+pland_LCCS1_c13_deciduous_needleleaf,0,1881.714532317273,0,Rock Kestrel,Dense,Forest
+pland_ASTWBD_c01_ocean,4.002397939450878,54.15459354388667,7.390689648898113,Seychelles Kestrel,Open,Water Body
+ALAN_mean,3.881217462716167,54.15459354388667,7.1669219704711535,Seychelles Kestrel,Dense,ALAN
+pland_LCCS1_c12_evergreen_broadleaf,1.503167653539292,54.15459354388667,2.775697415808561,Seychelles Kestrel,Dense,Forest
+pland_LCCS3_c27_woody_wetland,1.1711643540580448,54.15459354388667,2.1626316022646126,Seychelles Kestrel,Dense,Wetland
+pland_LCCS1_c21_open_forest,0.9331841620088952,54.15459354388667,1.7231856079810597,Seychelles Kestrel,Dense,Forest
+pland_LCCS1_c31_dense_herbaceous,0.8281202595377469,54.15459354388667,1.5291782383458228,Seychelles Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS3_c50_herbaceous_wetland,0.76296169858931,54.15459354388667,1.4088586926075046,Seychelles Kestrel,Open,Wetland
+pland_LCCS1_c01_barren,0.4728962282702644,54.15459354388667,0.8732338243606816,Seychelles Kestrel,Open,Barren
+pland_LCCS1_c11_evergreen_needleleaf,0.35678427664040924,54.15459354388667,0.658825509144063,Seychelles Kestrel,Dense,Forest
+pland_LCCS1_c22_sparse_forest,0.2475612493669525,54.15459354388667,0.4571380434539312,Seychelles Kestrel,Dense,Forest
+pland_LCCS1_c32_sparse_herbaceous,0.21130889979187503,54.15459354388667,0.39019570818241134,Seychelles Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c14_deciduous_broadleaf,2.9896480331262864e-4,54.15459354388667,5.520580688512576e-4,Seychelles Kestrel,Dense,Forest
+pland_LCCS1_c02_permanent_snow_ice,0,54.15459354388667,0,Seychelles Kestrel,Open,Snow & Ice
+pland_LCCS1_c13_deciduous_needleleaf,0,54.15459354388667,0,Seychelles Kestrel,Dense,Forest
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,0,54.15459354388667,0,Seychelles Kestrel,Dense,Forest
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,0,54.15459354388667,0,Seychelles Kestrel,Dense,Forest
+pland_LCCS1_c41_dense_shrubland,0,54.15459354388667,0,Seychelles Kestrel,Open,Shrubland
+pland_LCCS1_c42_shrubland_grassland_mosaic,0,54.15459354388667,0,Seychelles Kestrel,Open,Mixed
+pland_LCCS1_c43_sparse_shrubland,0,54.15459354388667,0,Seychelles Kestrel,Open,Shrubland
+pland_LCCS2_c25_forest_cropland_mosaic,0,54.15459354388667,0,Seychelles Kestrel,Dense,Mixed
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,0,54.15459354388667,0,Seychelles Kestrel,Open,Mixed
+pland_LCCS2_c36_herbaceous_cropland,0,54.15459354388667,0,Seychelles Kestrel,Open,Cropland
+pland_LCCS3_c51_tundra,0,54.15459354388667,0,Seychelles Kestrel,Open,Tundra
+pland_ASTWBD_c02_river,0,54.15459354388667,0,Seychelles Kestrel,Open,Water Body
+pland_ASTWBD_c03_lake,0,54.15459354388667,0,Seychelles Kestrel,Open,Water Body
+ALAN_mean,35.46812835075307,379.6468148653864,9.342401137575514,Spotted Kestrel,Dense,ALAN
+pland_LCCS1_c12_evergreen_broadleaf,12.752019682408074,379.6468148653864,3.3589165464036967,Spotted Kestrel,Dense,Forest
+pland_LCCS1_c21_open_forest,11.163632951863788,379.6468148653864,2.940531176541582,Spotted Kestrel,Dense,Forest
+pland_ASTWBD_c01_ocean,10.624146826989648,379.6468148653864,2.7984290690695546,Spotted Kestrel,Open,Water Body
+pland_LCCS1_c22_sparse_forest,7.147454373344042,379.6468148653864,1.882658853829277,Spotted Kestrel,Dense,Forest
+pland_LCCS2_c25_forest_cropland_mosaic,5.260640233441985,379.6468148653864,1.385666895508469,Spotted Kestrel,Dense,Mixed
+pland_LCCS1_c31_dense_herbaceous,4.9100313732097085,379.6468148653864,1.2933155714609872,Spotted Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS2_c36_herbaceous_cropland,2.7594899222828464,379.6468148653864,0.7268571246307689,Spotted Kestrel,Open,Cropland
+pland_LCCS3_c27_woody_wetland,2.4650180538215416,379.6468148653864,0.6492924363649877,Spotted Kestrel,Dense,Wetland
+pland_ASTWBD_c03_lake,2.066805754023359,379.6468148653864,0.5444022373152789,Spotted Kestrel,Open,Water Body
+pland_LCCS1_c14_deciduous_broadleaf,1.8288693552961153,379.6468148653864,0.4817291450066789,Spotted Kestrel,Dense,Forest
+pland_LCCS3_c50_herbaceous_wetland,1.2572525310312668,379.6468148653864,0.33116372423065316,Spotted Kestrel,Open,Wetland
+pland_LCCS1_c11_evergreen_needleleaf,0.9381617840314536,379.6468148653864,0.2471143566327833,Spotted Kestrel,Dense,Forest
+pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous,0.7570823684819532,379.6468148653864,0.19941754779383472,Spotted Kestrel,Dense,Forest
+pland_LCCS1_c32_sparse_herbaceous,0.3593667740403886,379.6468148653864,0.09465818228128987,Spotted Kestrel,Open,Herbaceous Plant Cover
+pland_LCCS1_c01_barren,0.20241691022063463,379.6468148653864,0.05331716276676963,Spotted Kestrel,Open,Barren
+pland_ASTWBD_c02_river,0.0087027861027861,379.6468148653864,0.00229233744681142,Spotted Kestrel,Open,Water Body
+pland_LCCS1_c15_mixed_broadleaf_needleleaf,0.00306994535519125,379.6468148653864,8.08631927092495e-4,Spotted Kestrel,Dense,Forest
+pland_LCCS1_c41_dense_shrubland,0.00164522681110358,379.6468148653864,4.333572011362563e-4,Spotted Kestrel,Open,Shrubland
+pland_LCCS1_c02_permanent_snow_ice,0,379.6468148653864,0,Spotted Kestrel,Open,Snow & Ice
+pland_LCCS1_c13_deciduous_needleleaf,0,379.6468148653864,0,Spotted Kestrel,Dense,Forest
+pland_LCCS1_c42_shrubland_grassland_mosaic,0,379.6468148653864,0,Spotted Kestrel,Open,Mixed
+pland_LCCS1_c43_sparse_shrubland,0,379.6468148653864,0,Spotted Kestrel,Open,Shrubland
+pland_LCCS2_c35_natural_herbaceous_cropland_mosaic,0,379.6468148653864,0,Spotted Kestrel,Open,Mixed
+pland_LCCS3_c51_tundra,0,379.6468148653864,0,Spotted Kestrel,Open,Tundra

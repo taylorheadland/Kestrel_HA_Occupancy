@@ -1,0 +1,64 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+
+dat <- list.files(path = "Results/Habitat Associations/", pattern = "Habitat_Associations", full.names = T) |> 
+  map(read_csv) |> 
+  list_rbind()|> 
+  filter(str_detect(predictor, 'pland_LC|pland_AST|ALAN'))
+
+table <- dat |> 
+  select(species, predictor, Association) |> 
+  mutate(predictor = case_when(
+    predictor == "pland_ASTWBD_c01_ocean" ~ "Oceans",
+    predictor == "pland_ASTWBD_c02_river" ~ "Rivers",
+    predictor == "pland_ASTWBD_c03_lake" ~ "Lakes",
+    predictor == "pland_LCCS1_c01_barren" ~ "Barren Land",
+    predictor == "pland_LCCS1_c02_permanent_snow_ice" ~ "Permanent Snow & Ice",
+    predictor == "pland_LCCS1_c11_evergreen_needleleaf" ~ "Evergreen Needleleaf Forests",
+    predictor == "pland_LCCS1_c12_evergreen_broadleaf" ~ "Evergreen Broadleaf Forests",
+    predictor == "pland_LCCS1_c13_deciduous_needleleaf" ~ "Deciduous Needleleaf Forests",
+    predictor == "pland_LCCS1_c14_deciduous_broadleaf" ~ "Deciduous Broadleaf Forests",
+    predictor == "pland_LCCS1_c15_mixed_broadleaf_needleleaf" ~ "Mixed Broadleaf/Needleleaf Forests",
+    predictor == "pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous" ~ "Mixed Broadleaf/Evergreen Deciduous Forests",
+    predictor == "pland_LCCS1_c21_open_forest" ~ "Open Forests",
+    predictor == "pland_LCCS1_c22_sparse_forest" ~ "Sparse Forests",
+    predictor == "pland_LCCS1_c31_dense_herbaceous" ~ "Dense Herbaceous Cover",   
+    predictor == "pland_LCCS1_c32_sparse_herbaceous" ~ "Sparse Herbaceous Cover",
+    predictor == "pland_LCCS1_c41_dense_shrubland" ~ "Dense Shrubland",
+    predictor == "pland_LCCS1_c42_shrubland_grassland_mosaic" ~ "Shrubland/Grassland Mosaic", 
+    predictor == "pland_LCCS1_c43_sparse_shrubland" ~ "Sparse Shrubland",
+    predictor == "pland_LCCS2_c25_forest_cropland_mosaic" ~ "Forest/Cropland mosaic",
+    predictor == "pland_LCCS2_c35_natural_herbaceous_cropland_mosaic" ~ "Natural Herbaceous Cropland Mosaic",
+    predictor == "pland_LCCS2_c36_herbaceous_cropland" ~ "Herbaceous Cropland",
+    predictor == "pland_LCCS3_c27_woody_wetland" ~ "Woody Wetlands",
+    predictor == "pland_LCCS3_c50_herbaceous_wetland" ~ "Herbaceous Wetlands",   predictor == "pland_LCCS3_c51_tundra" ~ "Tundra",
+                               .default = predictor)) |> 
+  pivot_wider(names_from = predictor, values_from = Association) |> 
+  select(-contains("dense_forest")) |>
+  gt(rowname_col = "species") |> 
+  data_color(colors = scales::col_factor(
+             palette = c("red", "darkgreen"),
+             levels = c("Negative", "Positive"),
+             na.color = "Grey"),
+  apply_to = "fill",
+  autocolor_text = FALSE
+  ) |> 
+  tab_style(style = cell_borders(
+      sides = c("left", "right"),
+      color = "lightgrey",
+      weight = px(2),
+      style = "solid"
+  ),
+  locations = cells_body()) |> 
+  tab_spanner(label = "Predictor",
+              columns = where(is.character))
+
+#gtsave(table, "Figures/Kestrel_Species_Habitat_Associations.docx")
+```

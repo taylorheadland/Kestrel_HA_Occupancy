@@ -1,0 +1,103 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+library(paletteer)
+library(patchwork)
+library(gtsummary)
+library(gt)
+
+dat <- read_csv("Results/Habitat Associations/Kestrel_HA_predictor_importance") |> 
+  filter(str_detect(predictor, 'pland_LC|pland_AST|ALAN'))
+
+LC_type <- dat |> 
+  arrange(predictor) |> 
+  distinct(predictor) |> 
+  mutate(LC_type = c("Dense", "Open", "Open", "Open", "Open", "Open", "Dense", "Dense", "Dense", "Dense", "Dense", "Dense", "Dense", "Dense", "Open", "Open", "Open", "Open", "Open", "Dense", "Open", "Open", "Dense", "Open", "Open"),
+  LC_category = c("ALAN", "Water Body", "Water Body", "Water Body", "Barren", "Snow & Ice", "Forest", "Forest", "Forest", "Forest", "Forest", "Forest", "Forest", "Forest", "Herbaceous Plant Cover", "Herbaceous Plant Cover", "Shrubland", "Mixed", "Shrubland", "Mixed", "Mixed", "Cropland", "Wetland", "Wetland", "Tundra"))
+
+dat <- dat |> 
+  left_join(LC_type, by = "predictor")
+
+# median predictor order in variable importance for all predictors
+median_pred_order <- dat |> 
+  group_by(species, LC_type) |> 
+  mutate(order = dplyr::row_number()) |>
+  ungroup() |> 
+  count(predictor, order, LC_type) |>
+  group_by(predictor) |> 
+  mutate(median_order = median(order)) |> 
+  distinct(predictor, .keep_all = T) |> 
+  ungroup()
+
+pred_order_plot <- ggplot(data = median_pred_order, aes(x = LC_type, y = median_order, fill = LC_type)) +
+  geom_violin() +
+  stat_summary(fun = "median",
+               geom = "crossbar", 
+               width = 0.5,
+               colour = "black")+
+  geom_jitter(shape=16, position=position_jitter(0.2))+
+  scale_fill_manual(values = c("grey50", "grey50")) +
+  scale_y_continuous(limits = c(0, 14), breaks = c(0, 2, 4, 6, 8, 10, 12, 14)) +
+  labs(x = "Land Cover Type",
+       y = "Median Predictor Importance Rank")+
+  theme_bw() +
+  theme(legend.position = "none")
+
+pred_order_plot
+
+ggsave("Figures/Figure_3.png", pred_order_plot, dpi = 800)
+
+# Which direction is this relationship going overall?
+HA <- read_csv("Results/Habitat Associations/Kestrel_Habitat_Associations.csv")|> 
+  filter(str_detect(predictor, 'pland_LC|pland_AST|ALAN')) |> 
+  select(estimate, species, predictor, Association) |> 
+  drop_na()
+
+HA <- HA |>  mutate(LC_type = case_when(predictor == "ALAN_mean" ~ "Dense",
+                                 predictor == "pland_ASTWBD_c01_ocean" ~ "Open",
+    predictor == "pland_ASTWBD_c02_river" ~ "Open",
+    predictor == "pland_ASTWBD_c03_lake" ~ "Open",
+    predictor == "pland_LCCS1_c01_barren" ~ "Open",
+    predictor == "pland_LCCS1_c02_permanent_snow_ice" ~ "Open",
+    predictor == "pland_LCCS1_c11_evergreen_needleleaf" ~ "Dense",
+    predictor == "pland_LCCS1_c12_evergreen_broadleaf" ~ "Dense",
+    predictor == "pland_LCCS1_c13_deciduous_needleleaf" ~ "Dense",
+    predictor == "pland_LCCS1_c14_deciduous_broadleaf" ~ "Dense",
+    predictor == "pland_LCCS1_c15_mixed_broadleaf_needleleaf" ~ "Dense",
+    predictor == "pland_LCCS1_c16_mixed_broadleaf_evergreen_deciduous
+" ~ "Dense",
+    predictor == "pland_LCCS1_c21_open_forest" ~ "Dense",
+    predictor == "pland_LCCS1_c22_sparse_forest" ~ "Dense",
+    predictor == "pland_LCCS1_c31_dense_herbaceous" ~ "Open",   
+    predictor == "pland_LCCS1_c32_sparse_herbaceous" ~ "Open",
+    predictor == "pland_LCCS1_c41_dense_shrubland" ~ "Open",
+    predictor == "pland_LCCS1_c42_shrubland_grassland_mosaic" ~ "Open", 
+    predictor == "pland_LCCS1_c43_sparse_shrubland" ~ "Open",
+    predictor == "pland_LCCS2_c25_forest_cropland_mosaic" ~ "Dense",
+    predictor == "pland_LCCS2_c35_natural_herbaceous_cropland_mosaic
+" ~ "Open",
+    predictor == "pland_LCCS2_c36_herbaceous_cropland" ~ "Open",
+    predictor == "pland_LCCS3_c27_woody_wetland" ~ "Dense",
+    predictor == "pland_LCCS3_c50_herbaceous_wetland" ~ "Open",   
+    predictor == "pland_LCCS3_c51_tundra" ~ "Open"),
+    LC_type = fct_relevel(LC_type, c("Open", "Dense")))
+
+HA_mod <- glmmTMB::glmmTMB(estimate ~ LC_type + (1 | predictor), data = HA)
+
+broom.mixed::tidy(HA_mod, conf.int = TRUE)
+
+ggplot() +
+  geom_point(data = HA, aes(x = LC_type, y = estimate))
+
+# model table
+tbl_HA_mod <- tbl_regression(HA_mod, intercept = TRUE) |>
+  bold_p() |> 
+  modify_column_unhide(columns = c(statistic, std.error)) |> 
+  modify_header(label = "**Class**", estimate = "**Estimate**")
+```
