@@ -12,7 +12,7 @@ library(patchwork)
 library(gtsummary)
 library(gt)
 
-dat <- read_csv("Results/Habitat Associations/Kestrel_HA_predictor_importance") |> 
+dat <- read_csv("Results/Habitat Associations/Kestrel_HA_predictor_importance.csv") |> 
   filter(str_detect(predictor, 'pland_LC|pland_AST|ALAN'))
 
 LC_type <- dat |> 
