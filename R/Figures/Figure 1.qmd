@@ -6,7 +6,6 @@ editor: visual
 
 ```{r}
 # This script recreates figure one of the manuscript
-
 library(sf)
 library(ggplot2)
 library(patchwork)
@@ -292,8 +291,7 @@ centroidGreater <- Greater_Kestrel |>
 
 Greater_constant <- 10
 
-# Makes both plots and set x and y limits according to 
-# centroid and + / - constant
+# Make plots and set x and y limits according to centroid and + / - constant. Also set aspect ratio to 1 to get all plots the same size
 gg_Fox <- ggplot() +
   geom_sf(data = World) +
   geom_sf(data = WS) +
@@ -301,15 +299,14 @@ gg_Fox <- ggplot() +
   coord_sf(xlim = c(centroidFox$X - 30,
                     centroidFox$X + 40),
            ylim = c(centroidFox$Y - Fox_constant,
-                    centroidFox$Y + 30))+
+                    centroidFox$Y + 27))+
                  theme_bw() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank()) +
+    panel.grid.major = element_blank(),
+    aspect.ratio = 1) +
   scale_x_continuous(breaks = c(-10, 10, 30, 50))
-
-gg_Fox
 
 gg_Banded <- ggplot() +
   geom_sf(data = World) +
@@ -322,7 +319,8 @@ gg_Banded <- ggplot() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank())
+    panel.grid.major = element_blank(),
+    aspect.ratio = 1)
 
 gg_Rock <- ggplot() +
   geom_sf(data = World) +
@@ -335,7 +333,8 @@ gg_Rock <- ggplot() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank())
+    panel.grid.major = element_blank(), 
+    aspect.ratio = 1)
 
 gg_Nankeen <- ggplot() +
   geom_sf(data = World) +
@@ -348,10 +347,9 @@ gg_Nankeen <- ggplot() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank())+
+    panel.grid.major = element_blank(),
+    aspect.ratio = 1)+
   scale_x_continuous(breaks = c(110, 130, 150))
-
-gg_Nankeen
 
 gg_American <- ggplot() +
   geom_sf(data = World) +
@@ -364,10 +362,9 @@ gg_American <- ggplot() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank()) +
+    panel.grid.major = element_blank(),
+    aspect.ratio = 1) +
   scale_x_continuous(breaks = c(-140, -100, -60, -20))
-
-gg_American
 
 gg_Eurasian <- ggplot() +
   geom_sf(data = World) +
@@ -381,10 +378,9 @@ gg_Eurasian <- ggplot() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank())+
+    panel.grid.major = element_blank(),
+    aspect.ratio = 1)+
   scale_x_continuous(breaks = c(-20, 20, 60, 100, 140))
-
-gg_Eurasian
 
 gg_Lesser <- ggplot() +
   geom_sf(data = World) +
@@ -398,10 +394,9 @@ gg_Lesser <- ggplot() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank())+
+    panel.grid.major = element_blank(),
+    aspect.ratio = 1)+
   scale_x_continuous(breaks = c(-20, 20, 60, 100))
-
-gg_Lesser
 
 gg_Mauritius <- ggplot() +
   geom_sf(data = World) +
@@ -414,10 +409,9 @@ gg_Mauritius <- ggplot() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank())+
+    panel.grid.major = element_blank(),
+    aspect.ratio = 1)+
   scale_x_continuous(breaks = c(57.2, 57.6, 58))
-
-gg_Mauritius
 
 gg_Seychelles <- ggplot() +
   geom_sf(data = Seychelles_Kestrel, fill = "red", alpha = 0.7, linewidth = 0.25) + 
@@ -429,10 +423,9 @@ gg_Seychelles <- ggplot() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank()) +
+    panel.grid.major = element_blank(),
+    aspect.ratio = 1) +
   scale_x_continuous(breaks = c(55.2, 55.6, 56))
-
-gg_Seychelles
 
 gg_Malagasy <- ggplot() +
   geom_sf(data = World) +
@@ -445,7 +438,8 @@ gg_Malagasy <- ggplot() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank())
+    panel.grid.major = element_blank(),
+    aspect.ratio = 1)
 
 gg_Spotted <- ggplot() +
   geom_sf(data = World) +
@@ -458,10 +452,9 @@ gg_Spotted <- ggplot() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank()) +
+    panel.grid.major = element_blank(),
+    aspect.ratio = 1) +
   scale_x_continuous(breaks = c(110, 120, 130))
-
-gg_Spotted
 
 gg_Dickinsons <- ggplot() +
   geom_sf(data = World) +
@@ -474,10 +467,9 @@ gg_Dickinsons <- ggplot() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank())+
+    panel.grid.major = element_blank(),
+    aspect.ratio = 1)+
   scale_x_continuous(breaks = c(10, 20, 30, 40))
-
-gg_Dickinsons
 
 gg_Grey <- ggplot() +
   geom_sf(data = World) +
@@ -486,12 +478,13 @@ gg_Grey <- ggplot() +
   coord_sf(xlim = c(centroidGrey$X - 32,
                     centroidGrey$X + Grey_constant),
            ylim = c(centroidGrey$Y - Grey_constant,
-                    centroidGrey$Y + Grey_constant))+
+                    centroidGrey$Y + 32))+
                  theme_bw() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank())+
+    panel.grid.major = element_blank(),
+    aspect.ratio = 1)+
   scale_x_continuous(breaks = c(-20, 0, 20, 40))
 
 gg_Greater <- ggplot() +
@@ -506,14 +499,12 @@ gg_Greater <- ggplot() +
                  facet_wrap(~common_name) +
   theme(panel.background = element_rect(fill = "lightblue"),
         panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank())+
+    panel.grid.major = element_blank(),
+    aspect.ratio = 1)+
   scale_x_continuous(breaks = c(-10, 10, 30, 50))
-
-gg_Greater
 
 # Plot as one big figure with 14 small plots
 plots <- gg_Rock + gg_Fox + gg_Greater + gg_Grey + gg_Dickinsons + gg_Malagasy + gg_Banded + gg_Mauritius + gg_Seychelles + gg_Eurasian + gg_Lesser + gg_American + gg_Nankeen + gg_Spotted + plot_annotation(tag_levels = 'A')
-
 
 ggsave("Figures/Figure_1.png", plots, dpi = 800, width = 28, height = 25, units = "cm")
 ```
