@@ -1,6 +1,6 @@
 This repository contains the data and code to reproduce 'Urbanisation and urban green space shape the distribution of Kestrel species at the global scale'. 
 Scripts to undertake the analysis are located in the folders 'R/Habitat Association modelling', 'R/Landscape Analysis' and 'R/Occupancy modelling'.
-Due to file size constraints, some of the files for the Habitat Association modelling, and all the files for the Landscape analysis are not in this repository. Please contact taylor.headland@gmail.com for access to these files. 
+Due to file size constraints, some of the files for the Habitat Association modelling, and all the files for the Landscape analysis are not in this repository. 
 The code last worked under the following session information:
 R version 4.3.1 (2023-06-16 ucrt)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
