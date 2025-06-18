@@ -73,10 +73,12 @@ top_preds_plot <- top_preds_df |>
   coord_flip() +
   scale_x_discrete(limits = rev) +
   guides(fill = guide_legend(title = "Predictor Importance\nRanking")) +
-  scale_fill_paletteer_d("ltc::minou") +
+  scale_fill_paletteer_d("vangogh::Chaise") +
   theme_bw()
 
-#save
+top_preds_plot
+
+# save
 ggsave("Figures/Figure_2.png", top_preds_plot, dpi = 800)
 
 ```
